@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'BebasMyBaby';
+    src: url('fonts/BebasNeue_Regular_copy.ttf');}
+@font-face {
+    font-family: 'ThinBaby';
+    src: url('fonts/BebasLightCopy.otf');}
+body    {
+    font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 30;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: rgba(38,61,62,1);}
+a, p, li {
+	color: #dae7e8;
+}
+/* PUSH MENU */
+#menu {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    padding: 0 2.5%;
+	float: left;
+	/*
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+    -webkit-transition: all .3s ease-in;
+       -moz-transition: all .3s ease-in;
+         -o-transition: all .3s ease-in;
+            transition: all .3s ease-in;
+    text-align: center;*/
+    background-color: #314f4f;
+    color: #dae7e8;}
+#menu:hover {
+	color: white;
+    background-color: #395655;
+	transition: 1s;
+}
+#menu ul {
+    padding: 0;
+    margin-top: 60%;}
+#menu ul li a {
+    display: block;
+    line-height: 1.8em;
+    text-decoration: none;
+    text-transform: uppercase;
+	padding: 5% 0;
+	font-family: BebasMyBaby;
+    color: white;}
+#menu ul li:last-child a {
+    border-bottom: none;}
+#menu ul li a:hover {
+    letter-spacing: 1px;}
+
+/* MAIN PAGE */
+.page-wrap {
+    height: auto;
+    width: 70%;
+    padding: 2.5%;
+	margin-left: 25%;}
+
+/* Disable Button */
+button{
+	display: none;
+}
+.container {
+    width: 60%; /* total width = 75% */
+    height: auto;
+    margin: 0% 5% 5% 10%;
+    float: left;}
+h1 {
+	font-family: BebasMyBaby;
+	font-size: 8em;
+	text-align: center;
+	margin-bottom: 10%;
+    color: white;
+    border-bottom: solid 1px white;}
+ul {
+	list-style: none;
+	padding: 0}
+ul li {
+	font-family: ThinBaby;
+	font-size: 1.8em;
+	padding: 2% 0;
+	text-align: center;
+}
+article {
+	margin: 10% 0;
+}
+img {
+	width: 60%;
+    height: auto;
+    margin-left: 20%;
+}
+article p {
+	font-size: 1em;
+}
+form	{
+	margin-top: 5%;
+	margin-left: 20%;
+	color: #dae7e8;
+	font-size: 90%;}
+input {
+	width: 60%;
+	margin-bottom: 2%;}
+h2 {
+	font-family: BebasMyBaby;
+	font-size: 1.9em;
+    color: white;
+}
+aside {
+    width: 15%;
+    height: auto;
+	padding-top: 30%;
+    float: right;
+}
+aside h2 {
+	font-family: ThinBaby;
+	font-size: 1.5em;
+	text-align: right;
+}
+
+
+
