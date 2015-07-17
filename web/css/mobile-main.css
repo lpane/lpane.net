@@ -1,3 +1,9 @@
+/*      * * * * * 
+    UPDATE & TODO LOG
+    7/17 -  noticed that "h1" overflows on iphone 
+            decreasing h1 size from 5em to 4.5em 
+*/
+
 body    {
     font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
@@ -134,7 +140,7 @@ header {
     margin: 0% 5% 5% 10%;
     float: left;}
 h1 {
-	font-size: 5em;
+	font-size: 4.5em;
 	text-align: center;
 	margin-bottom: 5%;
     border-bottom: solid 1px white;}
