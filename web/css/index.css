@@ -55,7 +55,9 @@ h1, h2, li {
 #menu img {
 	display: block;
 	margin-left: auto;
-	margin-right: auto;}
+	margin-right: auto;
+	width: 60%;
+    height: auto;}
 /* MAIN PAGE */
 .page-wrap {
     height: auto;
@@ -79,10 +81,12 @@ header {
 	font-size: .9em;
 	color: rgb(251, 252, 255);}
 .container {
-    width: 80%; /* total width = 75% */
-    height: auto;
-    margin: 0% 10% 5% 10%;
-    float: left;}
+	position: fixed;
+    width: 50%; /* total width = 75% */
+    height: 90%;
+    margin: 5% 5% 5% 5%;
+    float: left;
+	overflow: auto;}
 h1 {
 	font-size: 8em;
 	text-align: center;
@@ -100,13 +104,25 @@ ul li {
 	text-transform: uppercase;
 }
 article {
-	margin: 10% 0;
-}
-img {
-	width: 60%;
-    height: auto;
-    margin-left: 20%;
-}
+	width: 100%;
+	height: auto;
+	margin-top: auto;
+	float: center;}
+#mhl-logo {
+	width: 40%;
+	height: auto;
+	vertical-align: middle;
+	margin-left: 30%;}
+#home-article {
+	width: 100%;
+	height: 20%;
+	margin-bottom: 5%;
+	float: center;}
+h3 {
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: 300;
+	font-family: 'Open Sans Condensed', sans-serif;}
 article p {
 	font-size: 1em;
 }
