@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Git hook restart nginx when files are pushed
+branch=$(git rev-parse --symbolic --abbrev-ref $refname)
+if [ "master" == "$branch" ]; then
+	sudo service nginx restart
+fi
