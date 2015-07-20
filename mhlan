@@ -5,7 +5,7 @@ use Mojolicious::Lite;
 app->config(
 	hypnotoad => {
 		listen	=> ['http://*:8081'],
-		proxy => 1
+		proxy	=> 1
 	}
 );
 
@@ -28,7 +28,7 @@ any '/games' => sub {
 any '/register' => sub {
 	my ($c) = @_;
 
-	$c->stash( title => 'Games', header => $header );
+	$c->stash( title => 'Register', header => $header );
 	$c->render( template => 'register' );
 };
 
