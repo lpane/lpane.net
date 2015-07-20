@@ -1,54 +1,27 @@
-<html>
-<head>
-    <title>Mostly Harmless Lan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 920px)" href="css/mobile-main.css">
-    <link rel="stylesheet" media="screen and (min-width: 921px)" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <nav id="menu"  role="navigation">
-        <!-- an image could go here -->
-        <ul>
-             <li><a href="index.html">Home</a></li>
-            <li><a href="game-list.html">Games</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="directions.html">Directions</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><img src="img/marvin.png"></li>
-        </ul>
-    </nav>
-    
-    
-    <div class="page-wrap">
-        <button id="menu-toggle"></button>
-        <!-- ACTUAL CONTENT BEGINS -->
-        <div class="container" role="main">
-            <header><p>August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry</p></header>
-            <article>
-                <h1>Game List</h1>
-                    
-                    <ul id="game-list">
-                        <li class="game">Team Fortress 2</li>
-                        <li class="game">Armagetron</li>
-                        <li class="game">Unreal Tournament</li>
-                        <li class="game">GoldenEye: Source</li>
-                        <li class="game">Counter-Strike GO</li>
-                    </ul>
-            </article>
-            <article>
-                <p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
-            </article>
-            
-            <article>
-                <h2>Vote for Games</h2>
-                <p>Help us make this LAN all you want it to be. Vote for your favorite games <a href="...">here</a> so we can plan accordingly. Have a game you think should be played? Email us and let us know.</p>
-            </article>
-        </div> 
-   </div>
-    <script type="text/javascript" src="js/mhPUSH.js"></script>
-    </body>
-</html>
+%= include 'segments/top'
+
+<div class="container" role="main">
+    <header><p><%= $header %></p></header>
+    <article>
+        <h1>Game List</h1>
+
+            <ul id="game-list">
+                <li class="game">Team Fortress 2</li>
+                <li class="game">Armagetron</li>
+                <li class="game">Unreal Tournament</li>
+                <li class="game">GoldenEye: Source</li>
+                <li class="game">Counter-Strike GO</li>
+            </ul>
+    </article>
+
+    <article>
+        <p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
+    </article>
+
+    <article>
+        <h2>Vote for Games</h2>
+        <p>Help us make this LAN all you want it to be. Vote for your favorite games <a href="...">here</a> so we can plan accordingly. Have a game you think should be played? Email us and let us know.</p>
+    </article>
+</div>
+
+%= include 'segments/bottom'

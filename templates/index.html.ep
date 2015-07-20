@@ -1,39 +1,9 @@
-<html>
-<head>
-    <title>Mostly Harmless Lan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 920px)" href="css/mobile-main.css">
-    <link rel="stylesheet" media="screen and (min-width: 921px)" href="css/index.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <nav id="menu"  role="navigation">
-        <!-- an image could go here -->
-        <ul>
-             <li><a href="index.html">Home</a></li>
-            <li><a href="game-list.html">Games</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="directions.html">Directions</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><img src="img/marvin.png"></li>
-        </ul>
-    </nav>
-    
-    
-    <div class="page-wrap">
-        <button id="menu-toggle"></button>
-        <!-- ACTUAL CONTENT BEGINS -->
-        <div class="container" role="main">
-            <article id="image-article">
-                <img id="mhl-logo" src="img/mhl-logo2.png">
-                
-            </article> 
-        </div>
-        
-   </div>
-    <script type="text/javascript" src="js/mhPUSH.js"></script>
-    </body>
-</html>
+%= include 'segments/top'
+
+<div class="container" role="main">
+	<article id="image-article">
+    	<img id="mhl-logo" src="img/mhl-logo.png">
+    </article>
+</div>
+
+%= include 'segments/bottom'

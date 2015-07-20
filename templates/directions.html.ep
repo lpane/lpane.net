@@ -1,48 +1,18 @@
-<html>
-<head>
-    <title>Mostly Harmless Lan</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 920px)" href="css/mobile-main.css">
-    <link rel="stylesheet" media="screen and (min-width: 921px)" href="css/main.css">
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <nav id="menu"  role="navigation">
-        <!-- an image could go here -->
-        <ul>
-             <li><a href="index.html">Home</a></li>
-            <li><a href="game-list.html">Games</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="directions.html">Directions</a></li>
-            <li><a href="sponsors.html">Sponsors</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><img src="img/marvin.png"></li>
-        </ul>
-    </nav>
-    
-    
-    <div class="page-wrap">
-        <button id="menu-toggle"></button>
-        <!-- ACTUAL CONTENT BEGINS -->
-        <div class="container" role="main">
-            <header><p>August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry</p></header>
-            <article>
-                <h1>Directions</h1>
-                    
-                    <ul id="game-list">
-                        <li class="game">Chester Mossman Teen Center</li>
-                        <li class="game">15 Memorial Drive</li>
-                        <li class="game">Lunenburg, MA</li>
-                        
-                    </ul>
-            </article>
-            <article>
-                <p>The Teen Center is located between Lunenburg Town hall and Lunenburg Public Library. Memorial Drive runs parallel to Massachusetts Ave (route 2A) and perpendicular to Main St.<br><br><a href="https://www.google.com/maps/dir//Chester+Mossman+Teen+Center,+15+Memorial+Dr,+Lunenburg,+MA+01462/@42.5959285,-71.7979462,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89e3e84836bbce91:0xb20bf9597d662097!2m2!1d-71.7241293!2d42.5959522!3e0" style="text-decoration: underline;">Get your directions here.</a></p>
-            </article>
-        </div>
-   </div>
-    <script type="text/javascript" src="js/mhPUSH.js"></script>
-    </body>
-</html>
+%= include 'segments/top'
+
+<div class="container" role="main">
+    <header><p><%= $header %></p></header>
+    <article>
+        <h1>Directions</h1>
+            <ul id="game-list">
+                <li class="game">Chester Mossman Teen Center</li>
+                <li class="game">15 Memorial Drive</li>
+                <li class="game">Lunenburg, MA</li>
+            </ul>
+    </article>
+    <article>
+        <p>The Teen Center is located between Lunenburg Town hall and Lunenburg Public Library. Memorial Drive runs parallel to Massachusetts Ave (route 2A) and perpendicular to Main St.<br><br><a href="https://www.google.com/maps/dir//Chester+Mossman+Teen+Center,+15+Memorial+Dr,+Lunenburg,+MA+01462/@42.5959285,-71.7979462,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89e3e84836bbce91:0xb20bf9597d662097!2m2!1d-71.7241293!2d42.5959522!3e0" style="text-decoration: underline;">Get your directions here.</a></p>
+    </article>
+</div>
+
+%= include 'segments/bottom'

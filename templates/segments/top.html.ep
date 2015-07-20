@@ -1,0 +1,10 @@
+<html>
+	<head>
+		%= include 'segments/head'
+	</head>
+	<body>
+
+		%= include 'segments/sidebar'
+
+    	<div class="page-wrap">
+    		<button id="menu-toggle"></button>
