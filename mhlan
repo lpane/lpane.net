@@ -1,6 +1,14 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite;
 
+# ALL GLORY TO HYPNOTOAD
+app->config(
+	hypnotoad => {
+		listen	=> ['http://*:8081'],
+		proxy => 1
+	}
+);
+
 my $header = 'August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry';
 
 any '/' => sub {
