@@ -1,17 +1,8 @@
 %= include 'segments/top'
 
-<div class="container" role="main">
-    <header><p><%= $header %></p></header>
-    <article>
-        <h1>Sponsors</h1>
-            <ul id="game-list">
-                <li class="game"></li>
-                <li class="game"></li>
-                <li class="game">To Be Announced</li>
-                <li class="game"></li>
-                <li class="game"></li>
-            </ul>
-    </article>
-</div>
+<p class="header"><%= $header %></p>
+
+<h1>Sponsors</h1>
+<h2>TBA</h2>
 
 %= include 'segments/bottom'

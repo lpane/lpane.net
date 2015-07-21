@@ -39,13 +39,6 @@ any '/directions' => sub {
 	$c->render( template => 'directions' );
 };
 
-any '/sponsors' => sub {
-	my ($c) = @_;
-
-	$c->stash( title => 'Sponsors', header => $header );
-	$c->render( template => 'sponsors' );
-};
-
 any '/contact' => sub {
 	my ($c) = @_;
 

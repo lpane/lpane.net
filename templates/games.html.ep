@@ -1,27 +1,22 @@
 %= include 'segments/top'
 
-<div class="container" role="main">
-    <header><p><%= $header %></p></header>
-    <article>
-        <h1>Game List</h1>
+<p class="header"><%= $header %></p>
 
-            <ul id="game-list">
-                <li class="game">Team Fortress 2</li>
-                <li class="game">Armagetron</li>
-                <li class="game">Unreal Tournament</li>
-                <li class="game">GoldenEye: Source</li>
-                <li class="game">Counter-Strike GO</li>
-            </ul>
-    </article>
+<h1>Game List</h1>
 
-    <article>
-        <p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
-    </article>
+<ul class="list">
+	<li class="game">Team Fortress 2</li>
+	<li class="game">Armagetron</li>
+	<li class="game">Unreal Tournament</li>
+	<li class="game">GoldenEye: Source</li>
+	<li class="game">Counter-Strike GO</li>
+</ul>
 
-    <article>
-        <h2>Vote for Games</h2>
-        <p>Help us make this LAN all you want it to be. Vote for your favorite games <a href="...">here</a> so we can plan accordingly. Have a game you think should be played? Email us and let us know.</p>
-    </article>
+<p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
+
+<h2>Vote for Games</h2>
+<p>Help us make this LAN all you want it to be. Vote for your favorite games <a href="...">here</a> so we can plan accordingly. Have a game you think should be played? Email us and let us know.</p>
+
 </div>
 
 %= include 'segments/bottom'

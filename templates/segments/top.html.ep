@@ -4,7 +4,29 @@
 		%= include 'segments/head'
 	</head>
 	<body>
-		<div class=".col-md-4" style="background-color:lavender;">
-			%= include 'segments/sidebar'
-		</div>
-		<div class=".col-md-8" style="background-color:lavenderblush;">
+		<div class="wrapper">
+			<div class="box">
+				<div class="row row-offcanvas row-offcanvas-left">
+					<!-- sidebar -->
+					<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+						<ul class="nav">
+							<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+						</ul>
+
+						<ul class="nav hidden-xs" id="lg-menu">
+							<li><a href="/">Home</a></li>
+							<li><a href="games">Games</a></li>
+							<li><a href="register">Register</a></li>
+							<li><a href="directions">Directions</a></li>
+							<li><a href="contact">Contact</a></li>
+						</ul>
+
+						<ul class="list-unstyled hidden-xs" id="sidebar-footer">
+							<li><img src="img/marvin.png"></li>
+						</ul>
+					</div>
+					<!-- /sidebar -->
+
+					<!-- content -->
+					<div class="column col-sm-10 col-xs-11" id="main">
