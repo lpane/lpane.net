@@ -1,17 +1,12 @@
 %= include 'segments/top'
 
-<div class="container" role="main">
-    <header><p><%= $header %></p></header>
-    <article>
-        <h1>Contact</h1>
-    </article>
-    <article>
-        <p>The name says it all. We're mostly harmless. If you have a question about this particular LAN or one in the future please reach out to us.</p>
-    </article>
-    <article>
-        <h2>General Inquiries</h2>
-        <p>For all general inquiries please email us at:<br><br>mostlylharmlesslan(at)gmail(dot)com</p>
-    </article>
-</div>
+<p class="header"><%= $header %></p>
+
+<h1>Contact</h1>
+
+<p>The name says it all. We're mostly harmless. If you have a question about this particular LAN or one in the future please reach out to us.</p>
+
+<h2>General Inquiries</h2>
+<p>For all general inquiries please email us at:<br><br>mostlylharmlesslan(at)gmail(dot)com</p>
 
 %= include 'segments/bottom'

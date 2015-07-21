@@ -1,14 +1,30 @@
-<title>Mostly Harmless Lan | <%= $title %></title>
-
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Styles -->
-<link href="css/mobile-main.css" rel="stylesheet" media="screen and (min-width: 300px) and (max-width: 920px)">
-<link href="css/main.css" rel="stylesheet" media="screen and (min-width: 921px)">
+<title>Mostly Harmless Lan | <%= $title %></title>
 
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700">
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
 <!-- Scripts -->
-<script type="text/javascript" src="js/push.js"></script>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+	$( document ).ready(function() {
+		/* off-canvas sidebar toggle */
+		$('[data-toggle=offcanvas]').click(function() {
+			$(this).toggleClass('visible-xs text-center');
+			$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+			$('.row-offcanvas').toggleClass('active');
+			$('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
+			$('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
+			$('#btnShow').toggle();
+		});
+	});
+</script>

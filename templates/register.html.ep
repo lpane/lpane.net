@@ -1,29 +1,47 @@
 %= include 'segments/top'
 
-<div class="container" role="main">
-    <header><p><%= $header %></p></header>
-    <article>
-        <h1>Register</h1>
-    </article>
-    <article>
-        <p>Registration is currently open. Fill out and submit the form below to begin the registration process. After submiting the form please proceed to our <a href="..." style="text-decoration:underline;">Paypal payment system</a> to pay your entry fee and secure your seat at this years Mostly Harmless LAN.</p>
-    </article>
-    <article>
-        <form>
-        Name<br>
-            <input type="text" placeholder="Joe" name="firstname"><br>
-            <input type="text" placeholder="Smith" name="lastname">
-        <br>
-        Handle: <br>
-            <input type="text" placeholder="LeftHandMan" name="handle">
-        <br>
-        Email:<br>
-            <input type="text" placeholder="youhavetobecarefulsteven@example.com" name="email">
-        <br>
-        <br>
-            <input type="submit" value="Submit">
-        </form>
-    </article>
-</div>
+<p class="header"><%= $header %></p>
+
+<h1>Register</h1>
+
+<p>Registration is currently open. Fill out and submit the form below to begin the registration process.</p>
+
+<form class="form-horizontal" role="form" action="POST">
+
+	<div class="form-group form-group-lg">
+		<label class="control-label col-sm-2" for="firstname">First Name:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" name="firstname" placeholder="First">
+		</div>
+	</div>
+
+	<div class="form-group form-group-lg">
+		<label class="control-label col-sm-2" for="lastname">Last Name:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" name="lastname" placeholder="Last">
+		</div>
+	</div>
+
+	<div class="form-group form-group-lg">
+		<label class="control-label col-sm-2" for="email">Email:</label>
+		<div class="col-sm-10">
+			<input type="email" class="form-control" name="email" placeholder="Email">
+		</div>
+	</div>
+
+	<div class="form-group form-group-lg">
+		<label class="control-label col-sm-2" for="handle">Handle:</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" name="handle" placeholder="Handle">
+		</div>
+	</div>
+
+	<div class="form-group form-group-lg">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default btn-lg">Submit</button>
+		</div>
+	</div>
+
+</form>
 
 %= include 'segments/bottom'
