@@ -1,0 +1,7 @@
+%= include 'segments/top'
+
+<div class="banner">
+	<img class="banner" src="img/mhl-logo.svg">
+</div>
+
+%= include 'segments/bottom'

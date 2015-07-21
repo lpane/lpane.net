@@ -1,0 +1,8 @@
+%= include 'segments/top'
+
+<p class="header"><%= $header %></p>
+
+<h1>Sponsors</h1>
+<h2>TBA</h2>
+
+%= include 'segments/bottom'

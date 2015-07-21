@@ -1,0 +1,12 @@
+%= include 'segments/top'
+
+<p class="header"><%= $header %></p>
+
+<h1>Contact</h1>
+
+<p>The name says it all. We're mostly harmless. If you have a question about this particular LAN or one in the future please reach out to us.</p>
+
+<h2>General Inquiries</h2>
+<p>For all general inquiries please email us at:<br><br>mostlylharmlesslan(at)gmail(dot)com</p>
+
+%= include 'segments/bottom'
