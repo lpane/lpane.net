@@ -1,47 +1,60 @@
 %= include 'segments/top'
 
-<p class="header"><%= $header %></p>
+<p class="header"><%= $settings->{header} %></p>
 
 <h1>Register</h1>
 
-<p>Registration is currently open. Fill out and submit the form below to begin the registration process.</p>
+% if( $available_seats > 0 ) {
 
-<form class="form-horizontal" role="form" action="POST">
+<p>Registration is currently open. The price of admission is $<%= $settings->{price} %>.</p>
+<p>There are currently <b><%= $available_seats %></b> seats available.</p>
+<p>Fill out and submit the form below to begin the registration process.</p>
+
+<form novalidate="novalidate" class="form-horizontal" role="form" method="post">
 
 	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-2" for="firstname">First Name:</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" name="firstname" placeholder="First">
+		<label class="control-label col-sm-3 col-md-2" for="firstname">First Name:</label>
+		<div class="col-sm-6 col-md-4">
+			<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
 		</div>
+		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{firstname} %></div>
+	</div>
+
+
+	<div class="form-group form-group-lg">
+		<label class="control-label col-sm-3 col-md-2" for="lastname">Last Name:</label>
+		<div class="col-sm-6 col-md-4">
+			<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
+		</div>
+		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{lastname} %></div>
 	</div>
 
 	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-2" for="lastname">Last Name:</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" name="lastname" placeholder="Last">
+		<label class="control-label col-sm-3 col-md-2" for="email">Email:</label>
+		<div class="col-sm-6 col-md-4">
+			<input type="email" class="form-control" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
 		</div>
+		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{email} %></div>
 	</div>
 
 	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-2" for="email">Email:</label>
-		<div class="col-sm-10">
-			<input type="email" class="form-control" name="email" placeholder="Email">
+		<label class="control-label col-sm-3 col-md-2" for="handle">Handle:</label>
+		<div class="col-sm-6 col-md-4">
+			<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
 		</div>
+		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{handle} %></div>
 	</div>
 
 	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-2" for="handle">Handle:</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" name="handle" placeholder="Handle">
-		</div>
-	</div>
-
-	<div class="form-group form-group-lg">
-		<div class="col-sm-offset-2 col-sm-10">
+		<div class="col-sm-offset-3 col-md-offset-2 col-sm-6 col-md-4">
 			<button type="submit" class="btn btn-default btn-lg">Submit</button>
 		</div>
 	</div>
 
 </form>
+
+% } else {
+	<h2>There are no more available seats.</h2>
+% }
 
 %= include 'segments/bottom'

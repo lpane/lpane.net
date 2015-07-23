@@ -1,6 +1,6 @@
 %= include 'segments/top'
 
-<p class="header"><%= $header %></p>
+<p class="header"><%= $settings->{header} %></p>
 
 <h1>Game List</h1>
 

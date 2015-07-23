@@ -18,7 +18,7 @@ h1, li {
 }
 
 h1 {
-	font-size: 8em;
+	font-size: 6em;
 	padding-bottom: .1em;
 }
 
@@ -27,7 +27,7 @@ h2 {
 }
 
 h3 {
-	font-size: 3em;
+	font-size: 2em;
 }
 
 p {
@@ -36,8 +36,13 @@ p {
 }
 
 form {
-	width: 40%;
 	padding-top: 2em;
+}
+
+div.error {
+	color: #FF5959;
+	font-size: 1.5em;
+	padding-top: 0.3em;
 }
 
 ul.list {
@@ -48,7 +53,7 @@ ul.list {
 
 .form-control:focus {
 	border-color: #FF5959;
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+	box-shadow: 0 0 10px #FF5959;
 }
 
 .wrapper, .row {
@@ -99,7 +104,7 @@ ul.list {
 }
 
 #sidebar {
-	font-size: 2vw;
+	font-size: 2.5vw;
 	padding: 0px;
 	padding-top: 15px;
 	text-align: center;
