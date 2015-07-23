@@ -20,8 +20,8 @@ app->config(
 my $settings = {
 	header	=> 'August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry',
 	seats	=> 30,
-	price	=> '1.00',
-	paypal_email	=> 'chris.handwerker@gmail.com',
+	price	=> '20.00',
+	paypal_email	=> 'packard.brian@gmail.com',
 	address	=> [
 		'Chester Mossman Teen Center',
 		'15 Memorial Drive',
@@ -65,6 +65,9 @@ get '/register' => sub {
 post '/register' => sub {
 	my ($c) = @_;
 
+	my $register = MostlyHarmless::Register->new();
+	$c->stash( available_seats => $settings->{seats} - $register->seatsTaken() );
+
 	my $params = $c->req->params->to_hash;
 
 	$c->stash( title => 'Register', fields => $params );
@@ -98,7 +101,6 @@ post '/register' => sub {
 	my $result = $validator->validate( $params );
 
 	if( $result ) {	# Form input valid
-		my $register = MostlyHarmless::Register->new();
 		my $status = $register->getStatus( email => $params->{email} );
 
 		my $paypal_id;
