@@ -33,6 +33,14 @@ my $settings = {
 
 app->defaults({
 	settings	=> $settings,
+	sidebar	=> [
+		{ name => "Home", href	=> "/" },
+		{ name => "Games", href	=> "/games" },
+		{ name => "Register", href	=> "/register" },
+		{ name => "Attendees", href	=> "/attendees" },
+		{ name => "Directions", href	=> "/directions" },
+		{ name => "Contact", href	=> "/contact" }
+	],
 	error	=> {},
 	fields	=> {},
 	header	=> 1
@@ -200,6 +208,16 @@ BODY
 	}
 
 	$c->respond_to( any => { text => '', status => '204' } );
+};
+
+any '/attendees' => sub {
+	my ($c) = @_;
+
+	# Get list of attendees
+	my $register = MostlyHarmless::Register->new();
+
+	$c->stash( title => 'Attendees', attendees => $register->getStatus() );
+	$c->render( template => 'attendees' );
 };
 
 any '/directions' => sub {
