@@ -1,7 +1,5 @@
 %= include 'segments/top'
 
-<p class="header"><%= $settings->{header} %></p>
-
 <h1>Register</h1>
 
 % if( $available_seats > 0 ) {

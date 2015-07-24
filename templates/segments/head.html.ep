@@ -4,11 +4,12 @@
 
 <title>Mostly Harmless Lan | <%= $title %></title>
 
-<!-- Styles -->
-<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<!-- Fonts -->
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700">
 
+<!-- Styles -->
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 <!-- Scripts -->
@@ -16,15 +17,12 @@
 <script src="/js/bootstrap.min.js"></script>
 
 <script>
-	$( document ).ready(function() {
-		/* off-canvas sidebar toggle */
-		$('[data-toggle=offcanvas]').click(function() {
-			$(this).toggleClass('visible-xs text-center');
-			$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
-			$('.row-offcanvas').toggleClass('active');
-			$('#lg-menu').toggleClass('hidden-xs').toggleClass('visible-xs');
-			$('#xs-menu').toggleClass('visible-xs').toggleClass('hidden-xs');
-			$('#btnShow').toggle();
-		});
-	});
+$( document ).ready(function() {
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
+
+    });
+});
 </script>

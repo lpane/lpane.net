@@ -35,13 +35,14 @@ app->defaults({
 	settings	=> $settings,
 	error	=> {},
 	fields	=> {},
+	header	=> 1
 });
 
 
 any '/' => sub {
   my ($c) = @_;
 
-  $c->stash( title => 'Home' );
+  $c->stash( title => 'Home', header => 0 );
   $c->render( template => 'index' );
 };
 
