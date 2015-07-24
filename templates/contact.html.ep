@@ -1,7 +1,5 @@
 %= include 'segments/top'
 
-<p class="header"><%= $settings->{header} %></p>
-
 <h1>Contact</h1>
 
 <p>The name says it all. We're mostly harmless. If you have a question about this particular LAN or one in the future please reach out to us.</p>

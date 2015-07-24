@@ -1,7 +1,5 @@
 %= include 'segments/top'
 
-<p class="header"><%= $settings->{header} %></p>
-
 <h1>Game List</h1>
 
 <ul class="list">
@@ -15,7 +13,7 @@
 <p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
 
 <h2>Vote for Games</h2>
-<p>Help us make this LAN all you want it to be. Vote for your favorite games <a href="...">here</a> so we can plan accordingly. Have a game you think should be played? Email us and let us know.</p>
+<p>Help us make this LAN all you want it to be. Have a suggestion or know of a game you think should be played? Email us and let us know.</p>
 
 </div>
 

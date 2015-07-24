@@ -4,29 +4,21 @@
 		%= include 'segments/head'
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="box">
-				<div class="row row-offcanvas row-offcanvas-left">
-					<!-- sidebar -->
-					<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+		<div id="wrapper">
+			<!-- sidebar -->
+			<div id="sidebar-wrapper">
+				<ul class="sidebar-nav">
+					<li><a href="/">Home</a></li>
+					<li><a href="/games">Games</a></li>
+					<li><a href="/register">Register</a></li>
+					<li><a href="/directions">Directions</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+				<div id="menu-toggle"><p><i class="glyphicon glyphicon-chevron-right"></i></p></div>
+			</div>
+			<!-- /sidebar -->
 
-						<ul class="nav">
-							<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
-						</ul>
+			<p class="header"><%= $settings->{header} if $header %></p>
 
-						<ul class="nav hidden-xs" id="lg-menu">
-							<li><a href="/">Home</a></li>
-							<li><a href="/games">Games</a></li>
-							<li><a href="/register">Register</a></li>
-							<li><a href="/directions">Directions</a></li>
-							<li><a href="/contact">Contact</a></li>
-						</ul>
-
-						<ul class="list-unstyled hidden-xs" id="sidebar-footer">
-							<li><img src="/img/marvin.png"></li>
-						</ul>
-					</div>
-					<!-- /sidebar -->
-
-					<!-- content -->
-					<div class="column col-sm-10 col-xs-11" id="main">
+			<!-- content -->
+			<div id="page-content-wrapper">

@@ -1,7 +1,5 @@
 %= include 'segments/top'
 
-<p class="header"><%= $settings->{header} %></p>
-
 <h1>Directions</h1>
 
 % foreach my $line ( @{ $settings->{address} } ) {
