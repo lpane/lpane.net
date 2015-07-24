@@ -5,7 +5,7 @@
 % if( $available_seats > 0 ) {
 
 <p>Registration is currently open. The price of admission is $<%= $settings->{price} %>.</p>
-<p>There are currently <b><%= $available_seats %></b> seats available.</p>
+<p>There are currently <b><%= $available_seats %></b> out of <%= $settings->{seats} %> seats available.</p>
 <p>Fill out and submit the form below to begin the registration process.</p>
 
 <form novalidate="novalidate" class="form-horizontal" role="form" method="post">

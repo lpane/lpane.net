@@ -24,5 +24,10 @@ $( document ).ready(function() {
 		$(this).find('i').toggleClass('glyphicon-chevron-right glyphicon-chevron-left');
 
     });
+
+% if( $autosubmit ) {
+	$("input[name='submit']").click();
+% }
+
 });
 </script>

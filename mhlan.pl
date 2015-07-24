@@ -43,7 +43,8 @@ app->defaults({
 	],
 	error	=> {},
 	fields	=> {},
-	header	=> 1
+	header	=> 1,
+	autosubmit	=> 0
 });
 
 
@@ -169,7 +170,7 @@ any '/register/pay/:paypal_id' => sub {
 	);
 
 	# Generate paypal pay form
-	$c->stash( title => 'Payment', attendee => $attendee, paypal_button => $button);
+	$c->stash( title => 'Payment', attendee => $attendee, paypal_button => $button, autosubmit => 1 );
 	$c->render( template => 'register/pay' );
 };
 
