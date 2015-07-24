@@ -37,6 +37,22 @@ p {
 form {
 	padding-top: 2em;
 }
+table {
+	margin-top: 1em;
+	font-size: 2em;
+}
+
+th, td {
+	padding: 15px;
+}
+
+tr:nth-child(odd) {
+	background-color: #314F4F;
+}
+
+tr:nth-child(even) {
+	background-color: #263D3E;
+}
 
 div.error {
 	color: #FF5959;
@@ -142,6 +158,7 @@ ul.list {
 	width: 210px;
 	margin: 0;
 	padding: 0;
+	padding-top: 1.8em;
 	list-style: none;
 	background: #314F4F;
 }

@@ -8,17 +8,14 @@
 			<!-- sidebar -->
 			<div id="sidebar-wrapper">
 				<ul class="sidebar-nav">
-					<li><a href="/">Home</a></li>
-					<li><a href="/games">Games</a></li>
-					<li><a href="/register">Register</a></li>
-					<li><a href="/directions">Directions</a></li>
-					<li><a href="/contact">Contact</a></li>
+				% foreach my $item ( @{ $sidebar } ) {
+					<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
+				% }
 				</ul>
 				<div id="menu-toggle"><p><i class="glyphicon glyphicon-chevron-right"></i></p></div>
 			</div>
 			<!-- /sidebar -->
 
-			<p class="header"><%= $settings->{header} if $header %></p>
-
 			<!-- content -->
 			<div id="page-content-wrapper">
+				<p class="header"><%= $settings->{header} if $header %></p>
