@@ -1,0 +1,18 @@
+%= include 'segments/top'
+
+<table class="table">
+	<tr>
+		<th>Name</th>
+		<th>Handle</th>
+	</tr>
+%	foreach my $attendee ( @{ $attendees } ) {
+%		if( $attendee->{payment_status} ) {
+	<tr>
+		<td><%= $attendee->{firstname} %> <%= $attendee->{lastname} %></td>
+		<td><%= $attendee->{handle} %></td>
+	</tr>
+%		}
+%	}
+</table>
+
+%= include 'segments/bottom'
