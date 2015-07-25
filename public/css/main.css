@@ -11,27 +11,34 @@ a, a:hover {
 	color: #FF5959;
 }
 
-h1, li {
+h1, li, h2 {
 	font-family: 'Open Sans Condensed', sans-serif;
 	text-transform: uppercase;
 }
 
 h1 {
-	font-size: 6em;
-	padding-bottom: .1em;
+	font-size: 16vw;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	text-align: center;
+	font-weight: 600;
+	color: white;
 }
 
 h2 {
-	font-size: 4em;
+	font-size: 3em;
+	margin: 15% 0 2% 0;
 }
 
 h3 {
 	font-size: 2em;
+	text-align: center;
+	line-height: 1em;
 }
 
 p {
 	padding-top: 1em;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 form {
@@ -61,9 +68,15 @@ div.error {
 }
 
 ul.list {
-	font-size: 1.8em;
-	font-weight: bold;
+	font-size: 2em;
+	font-weight: 300;
 	text-transform: uppercase;
+	padding-left: 0;
+	list-style: none;
+	text-align: center;	
+}
+.list li {
+	padding-bottom: .5em;
 }
 
 .form-control:focus {
@@ -87,11 +100,8 @@ ul.list {
 	font-weight: bold;
 	text-transform: uppercase;
 	width: 100%;
-	padding: 0;
-	margin: 0;
 	text-align: center;
-	font-size: 2em;
-	color: white;
+	font-size: 1em;
 }
 
 /* Toggle Styles */
@@ -116,7 +126,9 @@ ul.list {
 	margin-right: 5em;
 	background: #314F4F;
 	transition: all 0.5s ease;
+	/*
 	background-image: url("/img/marvin.png");
+	*/
 	background-repeat: no-repeat;
 	background-size: 250px;
 	background-position: bottom;
@@ -146,8 +158,8 @@ ul.list {
 
 #page-content-wrapper {
 	height: 100%;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 /* Sidebar Styles */
@@ -166,7 +178,8 @@ ul.list {
 .sidebar-nav li {
     line-height: 1.8em;
 	text-align: center;
-	font-size: 36px;
+	font-size: 2.5em;
+	padding: .3em 0;
 }
 
 .sidebar-nav li a {
@@ -186,19 +199,53 @@ ul.list {
 
 @media(min-width:768px) {
 	body {
-		font-size: 150%;
+		font-size: 1em;
+		
+	}
+	#sidebar-wrapper {
+		background-image: url("/img/marvin.png");
 	}
 	#wrapper {
 		padding-left: 200px;
 	}
 	#page-content-wrapper {
-		padding-right: 33%;
+		padding: 1% 10% 5% 10%;
 	}
-
+	#page-content-wrapper p {
+		padding: 0 10%;
+		font-size: 1.5em;
+	}
+	.header {
+		font-size: 2vw;
+	}
+	h1 {
+		margin-top: 5%;
+		font-size: 10vw;
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+	h2 {
+		margin: 5% 0 2% 10%;
+		text-transform: uppercase;
+		color: white;
+		font-family: 'Open Sans Condensed', sans-serif;
+		font-weight: 500;
+	}
+	.list {
+		margin-bottom: 10%;
+	}
+	.list li {
+		font-size: 3vw;
+		padding: 1% 0;
+	}
 	#sidebar-wrapper {
 		width: 200px;
 	}
-
+	.sidebar-nav li {
+    line-height: 1.8em;
+	text-align: center;
+	font-size: 2em;
+	padding: .5em 0;
+}
 	#wrapper.toggled #sidebar-wrapper {
 		width: 200px;
 	}
