@@ -3,11 +3,11 @@
 <h1>Game List</h1>
 
 <ul class="list">
-	<li class="game">Counter-Strike: Global Offensive</li>
-	<li class="game">Unreal Tournament 2004</li>
-	<li class="game">Team Fortress 2</li>
+	<li class="game"><a href="http://store.steampowered.com/app/730/">Counter-Strike: Global Offensive</a></li>
+	<li class="game"><a href="http://store.steampowered.com/app/13230/">Unreal Tournament 2004</a></li>
+	<li class="game"><a href="http://store.steampowered.com/app/440/">Team Fortress 2</a></li>
 	<li class="game"><a href="http://armagetronad.org/">Armagetron</a></li>
-	<li class="game">GoldenEye: Source</li>
+	<li class="game"><a href="http://www.moddb.com/mods/goldeneye-source">GoldenEye: Source</a></li>
 </ul>
 
 <p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
