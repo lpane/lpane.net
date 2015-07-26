@@ -6,6 +6,6 @@
 
 <h2>General Inquiries</h2>
 <p>For all general inquiries please email us at:</p>
-<p>mostlylharmlesslan@gmail.com</p>
+<p>mostlyharmlesslan@gmail.com</p>
 
 %= include 'segments/bottom'
