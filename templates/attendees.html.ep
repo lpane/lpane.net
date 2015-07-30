@@ -1,14 +1,11 @@
 %= include 'segments/top'
 
 <table class="table">
-	<tr>
-		<th>Name</th>
-		<th>Handle</th>
-	</tr>
+%	my $i=1;
 %	foreach my $attendee ( @{ $attendees } ) {
 %		if( $attendee->{payment_status} ) {
 	<tr>
-		<td><%= $attendee->{firstname} %> <%= $attendee->{lastname} %></td>
+		<td><%= $i++ %></td>
 		<td><%= $attendee->{handle} %></td>
 	</tr>
 %		}
