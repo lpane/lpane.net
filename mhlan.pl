@@ -37,6 +37,7 @@ app->defaults({
 		{ name => "Home", href	=> "/" },
 		{ name => "Games", href	=> "/games" },
 		{ name => "Register", href	=> "/register" },
+		{ name => "Gallery", href	=> "/gallery" },
 		{ name => "Directions", href	=> "/directions" },
 		{ name => "Contact", href	=> "/contact" },
 		{ name => "Facebook", href => "https://www.facebook.com/groups/911387732254295/" }
