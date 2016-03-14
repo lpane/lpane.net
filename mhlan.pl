@@ -236,4 +236,11 @@ any '/contact' => sub {
 	$c->render( template => 'contact' );
 };
 
+any '/about' => sub {
+	my ($c) = @_;
+
+	$c->stash( title => 'About' );
+	$c->render( template => 'about' );
+};
+
 app->start;
