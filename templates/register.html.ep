@@ -1,58 +1,61 @@
 %= include 'segments/top'
 
-<h1>Register</h1>
+<section class='col-xs-12' id='unique'>
 
-% if( $available_seats > 0 ) {
+	<h1><span class='accent'>Register</span> for MH LAN</h1>
 
-<p>Registration is currently open. The price of admission is $<%= $settings->{price} %>.</p>
-<p>There are currently <b><%= $available_seats %></b> out of <%= $settings->{seats} %> seats available.</p>
-<p>Fill out and submit the form below to begin the registration process.</p>
+	% if( $available_seats > 0 ) {
 
-<form novalidate="novalidate" class="form-horizontal" role="form" method="post">
+	<hr>
+	<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. Fill out and submit the form below to begin the registration process.</p>
 
-	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-3 col-md-2" for="firstname">First Name:</label>
-		<div class="col-sm-6 col-md-4">
-			<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
+	<!-- <p>Registration is currently open. The price of admission is $<%= $settings->{price} %>. There are currently <b><%= $available_seats %></b> out of <%= $settings->{seats} %> seats available.</p> -->
+
+	<hr>
+
+	<form novalidate="novalidate" class="form-horizontal" role="form" method="post">
+
+		<div class="form-group form-group-lg">
+			<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
+			<div class="col-xs-12 col-sm-6">
+				<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
+			</div>
+			<!-- removed error text -- should a red outline on the input -->
 		</div>
-		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{firstname} %></div>
-	</div>
 
 
-	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-3 col-md-2" for="lastname">Last Name:</label>
-		<div class="col-sm-6 col-md-4">
-			<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
+		<div class="form-group form-group-lg">
+			<label class="control-label col-sm-4 col-md-3" for="lastname">Last Name:</label>
+			<div class="col-xs-12 col-sm-6">
+				<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
+			</div>
 		</div>
-		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{lastname} %></div>
-	</div>
 
-	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-3 col-md-2" for="email">Email:</label>
-		<div class="col-sm-6 col-md-4">
-			<input type="email" class="form-control" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
+		<div class="form-group form-group-lg">
+			<label class="control-label col-sm-4 col-md-3" for="email">Email:</label>
+			<div class="col-xs-12 col-sm-6">
+				<input type="email" class="form-control" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
+			</div>
 		</div>
-		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{email} %></div>
-	</div>
 
-	<div class="form-group form-group-lg">
-		<label class="control-label col-sm-3 col-md-2" for="handle">Handle:</label>
-		<div class="col-sm-6 col-md-4">
-			<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
+		<div class="form-group form-group-lg">
+			<label class="control-label col-sm-4 col-md-3" for="handle">Handle:</label>
+			<div class="col-xs-12 col-sm-6">
+				<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
+			</div>
 		</div>
-		<div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-0 error"><%= $error->{handle} %></div>
-	</div>
 
-	<div class="form-group form-group-lg">
-		<div class="col-sm-offset-3 col-md-offset-2 col-sm-6 col-md-4">
-			<button type="submit" class="btn btn-default btn-lg">Submit</button>
+		<div class="form-group form-group-lg">
+			<div class="col-xs-8 col-sm-6 col-sm-offset-4 col-md-offset-3">
+				<button type="submit" class="btn btn-default btn-lg">Submit</button>
+			</div>
 		</div>
-	</div>
 
-</form>
+	</form>
 
-% } else {
-	<h2>There are no more available seats.</h2>
-% }
+	% } else {
+		<h2>There are no more available seats.</h2>
+	% }
+</section>
 
 %= include 'segments/bottom'

@@ -1,0 +1,15 @@
+<section id='announcement-wrapper' class='col-xs-12 clearfix'>
+  <h3>Announcements</h3>
+
+  <div class='announcement'>
+    <strong>Aug. 9 - MH Logins Now Run Off Steam API</strong>
+    <p class='text-muted'>Registering for Mostly Harmless LANs is now easier than ever. Learn more about the Steam API <a href='#'>here</a>.</p>
+  </div>
+
+  <hr>
+
+  <div class='announcement'>
+    <strong>Aug. 9 - MH FALL LAN Officially Announced</strong>
+    <p class='text-muted'>Save the date and vote for games! November 3rd at the Lodge in Canada. Register for this LAN now, <a href='#'>here</a>.</p>
+  </div>
+</section>

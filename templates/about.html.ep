@@ -1,0 +1,15 @@
+%= include 'segments/top'
+
+	<section class='col-xs-12' id='unique'>
+
+		<h1><span class='accent'>About</span> MH</h1>
+
+	</section>
+
+	%= include 'segments/announcements'
+
+</div>
+
+%= include 'segments/rightAside'
+
+%= include 'segments/bottom'

@@ -4,18 +4,15 @@
 		%= include 'segments/head'
 	</head>
 	<body>
-		<div id="wrapper">
-			<!-- sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-				% foreach my $item ( @{ $sidebar } ) {
-					<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
-				% }
-				</ul>
-				<div id="menu-toggle"><p><i class="glyphicon glyphicon-chevron-right"></i></p></div>
+		<div class="container-fluid">
+			<div class='fixed top-bar col-xs-12'>
+				<h3>Mostly Harmless</h3>
+				<!-- IMG of Marvin head -->
 			</div>
-			<!-- /sidebar -->
+		</div>
+			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
+		<div class='container'>
+			%= include 'segments/leftAside'
 
-			<!-- content -->
-			<div id="page-content-wrapper">
-				<p class="header"><%= $settings->{header} if $header %></p>
+			<!-- Begin specific page content -->
+			<div class='col-sm-9 col-lg-8 main-wrapper'>

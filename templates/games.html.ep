@@ -1,20 +1,53 @@
 %= include 'segments/top'
 
-<h1>Game List</h1>
+<section class='col-xs-12' id='unique'>
 
-<ul class="list">
-	<li class="game"><a href="http://store.steampowered.com/app/730/">Counter-Strike: Global Offensive</a></li>
-	<li class="game"><a href="http://store.steampowered.com/app/13230/">Unreal Tournament 2004</a></li>
-	<li class="game"><a href="http://store.steampowered.com/app/440/">Team Fortress 2</a></li>
-	<li class="game"><a href="http://armagetronad.org/">Armagetron</a></li>
-	<li class="game"><a href="http://www.moddb.com/mods/goldeneye-source">GoldenEye: Source</a></li>
-</ul>
+	<h1><span class='accent'>Games</span> MH Loves</h1>
+	<p class='text-muted'>When you attend a MH LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
 
-<p>You wouldn't show up to a LAN party without a mouse or operating system right? Some might... but you wouldn't! Don't be a pleb, install the games ahead of time.<br><br>Don't have one of the games above but want to play? Email us and we'll see if there's something we can do to help because you know what tickles our pickles? Helping our friends.</p>
+	<div class='col-xs-6 game-description'>
+		<h3>Dirty Bomb</h3>
+		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
+		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
+		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
+		<br>
+		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
+	</div>
+	<div class='col-xs-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
 
-<h2>Vote for Games</h2>
-<p>Help us make this LAN all you want it to be. Have a suggestion or know of a game you think should be played? Email us and let us know.</p>
+
+	<div class='col-xs-6 game-description clearfix'>
+		<h3>Golden Eye Source</h3>
+		<p class='text-muted'>FPS | Free</p>
+		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
+		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
+		<br>
+		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
+	</div>
+	<div class='col-xs-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/YQRKlQox-OQ" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
+
+	<div class='col-xs-6 game-description clearfix'>
+		<h3>Team Fortress</h3>
+		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
+		<p>"Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!" <span class='text-muted'>- via Steam</span></p>
+		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
+		<br>
+		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
+	</div>
+	<div class='col-xs-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/h_c3iQImXZg" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
+
+</section>
+
+	%= include 'segments/announcements'
 
 </div>
+
+%= include 'segments/rightAside'
 
 %= include 'segments/bottom'

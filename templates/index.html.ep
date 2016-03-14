@@ -1,7 +1,27 @@
 %= include 'segments/top'
 
-<div class="banner">
-	<img class="banner" src="img/mhl-logo.svg">
+	<section class='col-xs-12' id='unique'>
+
+		<!-- Text container -->
+		<div class='col-xs-12 col-sm-8'>
+			<h1><span class='accent'>Hola</span> LAN Lovers</h1>
+			<h3>Welcome to Mostly Harmless LAN</h3>
+			<p>Mostly Harmless is a group of guys and gals that organize LAN parties across Massachusetts.<br><br>Expolore our site, read our <a href='#' class='accent'>blog</a>, or follow us on our social media accounts to get to know us and stay in the loop by subscribing to our <a href='#' class='accent'>newsletter</a>.<br><br>Learn more about us and our staff <a href='#' class='accent'>here</a>.
+			</p>
+		</div>
+
+		<!-- Image container -->
+		<div class='col-xs-12 col-sm-4'>
+			<p>
+				Marvin and Links go here
+			</p>
+		</div>
+	</section>
+
+	%= include 'segments/announcements'
+
 </div>
+
+%= include 'segments/rightAside'
 
 %= include 'segments/bottom'

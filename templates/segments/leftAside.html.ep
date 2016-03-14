@@ -1,0 +1,30 @@
+<!-- Navigation, Connect, Sponsors -->
+<div class='col-sm-3 col-lg-2' id='leftAside'>
+  <nav role="navigation">
+    <ul class="nav nav-pills nav-stacked">
+      <a href='index.html'>Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='about.html'>About<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='contact.html'>Contact<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='events.html'>Events<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='games.html'>Games<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='register'>Register<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+    </ul>
+  </nav>
+
+  <div id='connect' class='col-xs-12'>
+    <h3>Connect</h3>
+    <img src='http://stjuliansprimary.com/wp-content/uploads/2013/12/twitter-logo-grey-copy.png' class='img-responsive col-xs-3'>
+    <img src='http://rubymediagroup.com/wp-content/uploads/2014/03/Google+.png' class='img-responsive col-xs-3'>
+    <img src='http://cforjustice.org/wp-content/uploads/2015/05/youTube_grey_footer.png' class='img-responsive col-xs-3'>
+    <img src='http://stjuliansprimary.com/wp-content/uploads/2013/12/twitter-logo-grey-copy.png' class='img-responsive col-xs-3'>
+    <br>
+    <p><strong class='col-xs-12'>Social Media</strong><br>Subscribe to our newsletter</p>
+  </div>
+
+  <div id='sponsors' class='col-xs-12'>
+    <h3>Sponsors</h3>
+    <img src='http://www.boostb2b.com/wp-content/uploads/2015/05/microcenter_logo_tcm23-152934.gif' class='img-responsive col-xs-12'>
+    <img src='http://dg6qn11ynnp6a.cloudfront.net/wp-content/uploads/2015/02/BAWLS_Guarana_Logo-blue.png' class='img-responsive col-xs-6'>
+    <img src='http://www.surge.com/files/uploads/surge-logo-light.png' class='img-responsive col-xs-6'>
+  </div>
+</div>
