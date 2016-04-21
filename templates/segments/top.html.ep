@@ -5,11 +5,33 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class='fixed top-bar col-xs-12'>
-				<h3>Mostly Harmless</h3>
-				<!-- IMG of Marvin head -->
-			</div>
-		</div>
+			<!-- MOBILE NAV -->
+			<nav class="navbar navbar-default navbar-fixed-top" id="mobile-nav">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Brand</a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+	            <li><a href="index.html">Home</a></li>
+	            <li><a href="about.html">About</a></li>
+	            <li><a href="contact.html">Contact</a></li>
+							<li><a href="events.html">Events</a></li>
+	            <li><a href="games.html">Games</a></li>
+	            <li><a href="register.html">Register</a></li>
+			      </ul>
+					</div>
+				</div>
+			</nav>
 			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
 		<div class='container'>
 			%= include 'segments/leftAside'

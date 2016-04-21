@@ -19,5 +19,6 @@
 				</div>
 			</footer>
 		</div> <!-- /.container-fluid -->
+		<script src="public/js/scripts.js"></script>
 	</body>
 </html>

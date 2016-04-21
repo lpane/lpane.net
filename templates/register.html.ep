@@ -13,7 +13,7 @@
 
 	<hr>
 
-	<form novalidate="novalidate" class="form-horizontal" role="form" method="post">
+	<form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
 
 		<div class="form-group form-group-lg">
 			<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
@@ -34,7 +34,7 @@
 		<div class="form-group form-group-lg">
 			<label class="control-label col-sm-4 col-md-3" for="email">Email:</label>
 			<div class="col-xs-12 col-sm-6">
-				<input type="email" class="form-control" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
+				<input type="email" class="form-control has-error has-feedback" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
 			</div>
 		</div>
 

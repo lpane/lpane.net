@@ -1,11 +1,22 @@
 %= include 'segments/top'
 
-<h1>Contact</h1>
+	<section class='col-xs-12' id='unique'>
+		<h1><span class='accent'>Contact</span> MH</h1>
+		<p>The name says it all - we’re mostly harmless. If you have a question or comment please reach out, we’d love to hear it!</p>
+		<div class='col-sm-3'>
+			<b>Email</b>
+			<p>mhlan@gmail.com</p>
+			<b>Twitter</b>
+			<p>@MH_LAN</p>
+			<b>Steam</b>
+			<p>=MH=</p>
+		</div>
+	</section>
 
-<p>The name says it all. We're mostly harmless. If you have a question about this particular LAN or one in the future please reach out to us.</p>
+	%= include 'segments/announcements'
 
-<h2>General Inquiries</h2>
-<p>For all general inquiries please email us at:</p>
-<p>mostlyharmlesslan@gmail.com</p>
+</div>
+
+%= include 'segments/rightAside'
 
 %= include 'segments/bottom'

@@ -16,7 +16,7 @@
 	<div class='col-xs-6 game-preview'>
 		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
 	</div>
-
+	<hr>
 
 	<div class='col-xs-6 game-description clearfix'>
 		<h3>Golden Eye Source</h3>
@@ -29,6 +29,7 @@
 	<div class='col-xs-6 game-preview'>
 		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/YQRKlQox-OQ" frameborder="0" allowfullscreen class='trailer-video'></iframe>
 	</div>
+	<hr>
 
 	<div class='col-xs-6 game-description clearfix'>
 		<h3>Team Fortress</h3>

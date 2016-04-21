@@ -29,9 +29,15 @@ h1, h2 {
 h3 {
   font-size: 24px;
 }
+ul {
+  list-style: none;
+}
 /* 01 : helper classes */
 .accent {
   color: #F1654C;
+}
+.big {
+  font-size: 21px;
 }
 .clearfix {
   clear: both;
@@ -40,12 +46,30 @@ h3 {
   padding: 0;
 }
 
-/* 02 - Layouts */
+/* 01 : Buttons */
+form button {
+  background-color: #00B5B5;
+  color: white;
+}
+
+/* ****
+  02 - Layouts
+**** */
 section, #leftAside div {
   background: #fafafa;
   margin: 10px 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
   border-radius: 5px;
+}
+@media (max-width: 992px) {
+  #leftAside {
+    display: none
+  }
+}
+@media (min-width: 992px) {
+  #mobile-nav {
+    display: none
+  }
 }
 #unique  {
   padding: 40px;
@@ -104,17 +128,27 @@ footer ul .staff-position {
   #rightAside div{
     min-height: 200px;
   }
+  #updates {
+    border-left: 5px solid #F1654C;
+  }
+  #community {
+    border-left: 5px solid #3E4651;
+  }
+  #blog {
+    border-left: 5px solid #00B5B5;
+  }
 }
-#updates {
-  border-top: 5px solid #F1654C;
+@media (max-width: 992px) {
+  #updates {
+    border-top: 5px solid #F1654C;
+  }
+  #community {
+    border-top: 5px solid #3E4651;
+  }
+  #blog {
+    border-top: 5px solid #00B5B5;
+  }
 }
-#community {
-  border-top: 5px solid #3E4651;
-}
-#blog {
-  border-top: 5px solid #00B5B5;
-}
-
 /* Announcements */
 #announcement-wrapper strong{
   font-size: 18px;
@@ -129,7 +163,101 @@ footer ul .staff-position {
 #announcement-wrapper .announcement {
   margin: 15px 0;
 }
-
+/* Game Descriptions */
+.game-description {
+  padding-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .game-preview iframe {
+    margin-top: 25px;
+  }
+}
 .top-bar {
   background-color: #2E3135;
+}
+
+/* Registration Form */
+#registration-form label {
+  font-weight: 300;
+}
+#registration-form input.has-error {
+  border-color: #F1654C;
+}
+/* Official Staff */
+.mh-member {
+  text-align: center;
+  cursor: pointer;
+}
+.mh-member.active hr {
+  border-color: #F1654C;
+}
+.mh-member.active p {
+  color: black;
+  font-weight: bold;
+}
+.mh-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0px auto 10px auto;
+    z-index: 1;
+}
+.mh-member-profile {
+  display: none;
+}
+.mh-member-profile.active {
+    display: block;
+}
+
+
+/* Animations */
+/* Icon Up */
+@-webkit-keyframes hvr-icon-up {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25%,
+  75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hvr-icon-up {
+  0%,
+  50%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  25%,
+  75% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+/* Bounce In */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

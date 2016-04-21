@@ -1,9 +1,70 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
-
 		<h1><span class='accent'>About</span> MH</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iste assumenda autem iusto, ipsa fuga quam nemo at fugiat quidem corrupti possimus minus iure asperiores, deleniti quasi magni in beatae.
+		</p>
+		<p class='big'>Appreciations:</p>
+		<ul>
+			<li>Person 1</li>
+			<li>Person 1</li>
+			<li>Person 1</li>
+		</ul>
+	</section>
 
+	<section class='col-xs-12' id='unique official-staff'>
+		<h2 class='col-xs-12'>=MH= Official Staff</h2>
+		<div class='mh-member col-xs-3 activated' id='spacey'>
+			<hr>
+			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
+			<p class='text-muted'>Spacey0Monkey</p>
+			<hr>
+		</div>
+		<div class='mh-member col-xs-3' id='skunix'>
+			<hr>
+			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
+			<p class='text-muted'>Skunix</p>
+			<hr>
+		</div>
+		<div class='mh-member col-xs-3' id='wash'>
+			<hr>
+			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
+			<p class='text-muted'>Wash Your Hands</p>
+			<hr>
+		</div>
+		<div class='mh-member col-xs-3' id='spacey'>
+			<hr>
+			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
+			<p class='text-muted'>Spacey0Monkey</p>
+			<hr>
+		</div>
+
+		<!-- =MH= Profiles -->
+		<div class='col-xs-12 mh-member-profile' id='spacey'>
+			<h3 class='col-xs-12 accent'>Spacey0Moneky</h3>
+			<div class='col-xs-12 col-sm-8'>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime consequatur vero inventore perspiciatis labore sint numquam nisi, enim. Sunt quas minus quod voluptas nihil saepe nulla temporibus inventore doloremque. Temporibus.
+				</p>
+			</div>
+			<div class='col-xs-12 col-sm-4'>
+				<p><b>Position:</b> Our Fearless Leader</p>
+				<p><b>Favorite Game:</b> Our Fearless Leader</p>
+			</div>
+		</div>
+
+		<div class='col-xs-12 mh-member-profile' id='skunix'>
+			<h3 class='col-xs-12 accent'>Spacey0Moneky</h3>
+			<div class='col-xs-12 col-sm-8'>
+				<p>SKUNIX
+				</p>
+			</div>
+			<div class='col-xs-12 col-sm-4'>
+				<p><b>Position:</b> Our Fearless Leader</p>
+				<p><b>Favorite Game:</b> Our Fearless Leader</p>
+			</div>
+		</div>
 	</section>
 
 	%= include 'segments/announcements'
