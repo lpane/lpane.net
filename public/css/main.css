@@ -5,9 +5,15 @@ body {
   background: #EFEBE9;
   font-family: 'Roboto', sans-serif;
 }
+.container-fluid#page-wrap {
+  min-height: 100vh;
+}
 .container-fluid, .container {
   padding: 0;
   margin: auto;
+}
+@media (min-width:768px){
+  .container{width:auto;}
 }
 @media (min-width: 992px) {
   .container {
@@ -68,10 +74,13 @@ section, #leftAside div {
 }
 @media (max-width: 992px) {
   #leftAside {
-    display: none
-  }
-  #top-bar {
     display: none;
+  }
+  .top-bar {
+    display: none;
+  }
+  #page-wrap {
+    margin-top: 50px;
   }
 }
 @media (min-width: 992px) {
@@ -80,7 +89,7 @@ section, #leftAside div {
   }
 }
 #unique  {
-  padding: 40px;
+  padding: 0px;
 }
 
 footer {
@@ -103,8 +112,29 @@ footer ul .staff-position {
 .navbar-fixed-top .container-fluid {
   padding: 2px 10px;
   height: 50px;
+  background: #2E3135;
+}
+.navbar-header .button .span {
+  color: white;
+}
+.navbar-header .navbar-brand {
+  color: white;
+}
+.navbar .collapse ul li a {
+  color: white;
+}
+  /* Hovers */
+.navbar .navbar-brand:hover{
+  color: red;
+}
+.navbar .collapse ul li a:hover {
+  color: red;
 }
 
+  /* Active */
+.navbar .collapse ul li a:active {
+  color: yellow;
+}
 #leftAside {
   background-color: none;
   padding: 0;
@@ -136,6 +166,12 @@ footer ul .staff-position {
 /* Right Aside */
 #rightAside {
   padding: 0;
+}
+@media (min-width: 909px) and (max-width: 1200px) {
+  #rightAside {
+    float: left;
+    margin-left: 20px;
+  }
 }
 /*@media (min-width: 786px) {
   #rightAside div{

@@ -4,7 +4,7 @@
 		%= include 'segments/head'
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid" id="page-wrap">
 			<!-- MOBILE NAV -->
 			<nav class="navbar navbar-default navbar-fixed-top" id="mobile-nav">
 			  <div class="container-fluid">
@@ -22,12 +22,12 @@
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-	            <li><a href="index.html">Home</a></li>
-	            <li><a href="about.html">About</a></li>
-	            <li><a href="contact.html">Contact</a></li>
-							<li><a href="events.html">Events</a></li>
-	            <li><a href="games.html">Games</a></li>
-	            <li><a href="register.html">Register</a></li>
+	            <li><a href="index">Home</a></li>
+	            <li><a href="about">About</a></li>
+	            <li><a href="contact">Contact</a></li>
+							<li><a href="events">Events</a></li>
+	            <li><a href="games">Games</a></li>
+	            <li><a href="register">Register</a></li>
 			      </ul>
 					</div>
 				</div>
@@ -40,4 +40,4 @@
 			%= include 'segments/leftAside'
 
 			<!-- Begin specific page content -->
-			<div class='col-sm-9 col-lg-8 main-wrapper'>
+			<div class='col-sm-8 col-lg-8 main-wrapper'>
