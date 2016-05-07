@@ -69,10 +69,22 @@ section, #leftAside div {
 .top-bar {
   height: 50px;
   color: #F1654C;
-  padding: 15px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
 }
 .top-bar p {
-  font-size: 36px;
+  font-size: 24px;
+}
+.top-bar #event-banner p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+.top-bar img {
+  height: 35px;
+  width: auto;
+  float: right;
 }
 @media (max-width: 992px) {
   #leftAside {

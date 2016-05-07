@@ -27,8 +27,14 @@
 			</nav>
 			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
 			<div class='top-bar'>
-				<p class='oswald strong'>MOSTLY HARMLESS</p>
-				<img src='/img/marvin-small.svg' class='img-responsive pull-right' alt='marvin'>
+				<p class='oswald strong col-sm-3'>MOSTLY HARMLESS</p>
+				<div class='col-sm-6 col-md-8 text-center' id='event-banner'>
+
+					<!-- Put event info here in the banner-->
+					<p>Next LAN Party: Date, Place, Price</p>
+
+				</div>
+				<img src='/img/marvin-small.svg' class='img-responsive' alt='marvin'>
 			</div>
 		<div class='container'>
 			%= include 'segments/leftAside'

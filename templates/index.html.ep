@@ -11,10 +11,11 @@
 		</div>
 
 		<!-- Image container -->
-		<div class='col-xs-12 col-sm-4'>
-			<p>
-				Marvin and Links go here
-			</p>
+		<div class='col-xs-12 col-sm-4' id='img-container'>
+			<img src='img/marvin.png' class='img-responsive'>
+			<hr>
+			<button type="button" class="btn btn-default">Register</button>
+			<p>Have people login or reigster for the site</p>
 		</div>
 	</section>
 
