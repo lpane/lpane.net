@@ -2,12 +2,12 @@
 <div class='col-sm-3 col-lg-2' id='leftAside'>
   <nav role="navigation">
     <ul class="nav nav-pills nav-stacked">
-      <a href='index.html'>Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='about.html'>About<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='contact.html'>Contact<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='events.html'>Events<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='games.html'>Games<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='register'>Register<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/'>Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/about'>About<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/contact'>Contact<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/events'>Events<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/games'>Games<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+      <a href='/register'>Register<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
     </ul>
   </nav>
 
