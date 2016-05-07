@@ -1,13 +1,10 @@
 <!-- Navigation, Connect, Sponsors -->
 <div class='col-sm-3 col-lg-2' id='leftAside'>
-  <nav role="navigation">
-    <ul class="nav nav-pills nav-stacked">
-      <a href='/'>Home<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='/about'>About<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='/contact'>Contact<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='/events'>Events<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='/games'>Games<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
-      <a href='/register'>Register<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+	<nav role="navigation">
+		<ul class="nav nav-pills nav-stacked">
+			% foreach my $item ( @{ $sidebar } ) {
+				<a href="<%= $item->{href} %>"><%= $item->{name} %><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></a>
+			% }
     </ul>
   </nav>
 

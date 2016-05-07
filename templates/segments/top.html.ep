@@ -20,12 +20,16 @@
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
-
-			      </ul>
+ 	 		    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    		<ul class="nav navbar-nav">
+							% foreach my $item ( @{ $sidebar } ) {
+								<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
+							% }
+			    		</ul>
 					</div>
 				</div>
 			</nav>
-			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
+			<!-- <p class="header"><%= $event->{header} if $header %></p> -->
 			<div class='top-bar'>
 				<p class='oswald strong col-sm-3'>MOSTLY HARMLESS</p>
 				<div class='col-sm-6 col-md-8 text-center' id='event-banner'>

@@ -1,12 +1,14 @@
 #!/usr/bin/env perl
 
 use Mojolicious::Lite;
+use Mojo::JSON qw( decode_json encode_json );
 
+use FindBin;
 use JSON::Schema;
 use Business::PayPal;
 use MIME::Lite;
 
-use lib '/var/www/mhlan.com/lib';
+use lib "$FindBin::Bin/lib";
 use MostlyHarmless::Register;
 
 # ALL GLORY TO HYPNOTOAD
@@ -17,30 +19,16 @@ app->config(
 	}
 );
 
-my $settings = {
-	header	=> 'August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry',
-	seats	=> 30,
-	price	=> '20.00',
-	paypal_email	=> 'packard.brian@gmail.com',
-	address	=> [
-		'Chester Mossman Teen Center',
-		'15 Memorial Drive',
-		'Lunenburg, MA'
-	],
-	directions	=> 'The Teen Center is located between Lunenburg Town hall and Lunenburg Public Library. Memorial Drive runs parallel to Massachusetts Ave (route 2A) and perpendicular to Main St.',
-	map	=> 'https://www.google.com/maps/dir//Chester+Mossman+Teen+Center,+15+Memorial+Dr,+Lunenburg,+MA+01462/@42.5959285,-71.7979462,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89e3e84836bbce91:0xb20bf9597d662097!2m2!1d-71.7241293!2d42.5959522!3e0'
-};
+my $event = getConfig('event');
 
 app->defaults({
-	settings	=> $settings,
+	event	=> $event,
 	sidebar	=> [
 		{ name => "Home", href	=> "/" },
-		{ name => "Games", href	=> "/games" },
 		{ name => "Register", href	=> "/register" },
-		{ name => "Gallery", href	=> "/gallery" },
-		{ name => "Directions", href	=> "/directions" },
+		{ name => "Games", href	=> "/games" },
+		{ name => "About", href => "/about" },
 		{ name => "Contact", href	=> "/contact" },
-		{ name => "Facebook", href => "https://www.facebook.com/groups/911387732254295/" }
 	],
 	error	=> {},
 	fields	=> {},
@@ -67,7 +55,7 @@ get '/register' => sub {
 	my ($c) = @_;
 
 	my $register = MostlyHarmless::Register->new();
-	my $available_seats = $settings->{seats} - $register->seatsTaken();
+	my $available_seats = $event->{seats} - $register->seatsTaken();
 
 	$c->stash( title => 'Register', available_seats => $available_seats );
 	$c->render( template => 'register' );
@@ -77,7 +65,7 @@ post '/register' => sub {
 	my ($c) = @_;
 
 	my $register = MostlyHarmless::Register->new();
-	$c->stash( available_seats => $settings->{seats} - $register->seatsTaken() );
+	$c->stash( available_seats => $event->{seats} - $register->seatsTaken() );
 
 	my $params = $c->req->params->to_hash;
 
@@ -160,11 +148,11 @@ any '/register/pay/:paypal_id' => sub {
 
 	my $paypal = Business::PayPal->new();
 	my $button = $paypal->button(
-		business	=> $settings->{paypal_email},
+		business	=> $event->{paypal_email},
 		item_name	=> 'Mostly Harmless LAN Registration',
 		return		=> "http://mhlan.com/register/pay/$paypal_id",
 		cancel_return	=> "http://mhlan.com",
-		amount	=> $settings->{price},
+		amount	=> $event->{price},
 		quantity	=> 1,
 		notify_url	=> "http://mhlan.com/register/verify",
 		custom	=> $paypal_id
@@ -184,7 +172,7 @@ any '/register/verify' => sub {
 	my $paypal = Business::PayPal->new( id => $paypal_id );
 	my ($txnstatus, $reason) = $paypal->ipnvalidate( $params );
 
-	if( $txnstatus && $params->{payment_gross} eq $settings->{price} ) {
+	if( $txnstatus && $params->{payment_gross} eq $event->{price} ) {
 		# Add user to paid table
 		my $register = MostlyHarmless::Register->new();
 		$register->setPaid( $paypal_id );
@@ -195,7 +183,7 @@ any '/register/verify' => sub {
 		my $message = <<"BODY";
 $attendee->{firstname} "$attendee->{handle}" $attendee->{lastname},
 
-I have received your payment of \$$settings->{price}. You are now registered for the Mostly Harmless LAN party.
+I have received your payment of \$$event->{price}. You are now registered for the Mostly Harmless LAN party.
 
 Thanks,
 The Mostly Harmless Robot
@@ -244,3 +232,10 @@ any '/about' => sub {
 };
 
 app->start;
+
+sub getConfig {
+	my ($name) = @_;
+
+	my $file = Mojo::Asset::File->new( path => "config/$name.json" );
+	return decode_json( $file->slurp );
+}
