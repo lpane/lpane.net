@@ -33,6 +33,9 @@
 				</div>
 			</nav>
 			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
+			<div class='top-bar'>
+				<p>MH LAN</p>
+			</div>
 		<div class='container'>
 			%= include 'segments/leftAside'
 
