@@ -9,7 +9,7 @@
 	<hr>
 	<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. Fill out and submit the form below to begin the registration process.</p>
 
-	<!-- <p>Registration is currently open. The price of admission is $<%= $settings->{price} %>. There are currently <b><%= $available_seats %></b> out of <%= $settings->{seats} %> seats available.</p> -->
+	<!-- <p>Registration is currently open. The price of admission is $<%= $event->{price} %>. There are currently <b><%= $available_seats %></b> out of <%= $event->{seats} %> seats available.</p> -->
 
 	<hr>
 
