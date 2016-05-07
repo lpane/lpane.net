@@ -34,7 +34,8 @@
 			</nav>
 			<!-- <p class="header"><%= $settings->{header} if $header %></p> -->
 			<div class='top-bar'>
-				<p>MH LAN</p>
+				<p class='oswald strong'>MOSTLY HARMLESS</p>
+				<img src='/img/marvin-small.svg' class='img-responsive pull-right' alt='marvin'>
 			</div>
 		<div class='container'>
 			%= include 'segments/leftAside'
