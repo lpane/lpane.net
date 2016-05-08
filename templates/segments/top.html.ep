@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</nav>
-			<!-- <p class="header"><%= $event->{header} if $header %></p> -->
+			<!-- <p class="header"><%= event->{header} if $header %></p> -->
 			<div class='top-bar'>
 				<p class='oswald strong'>MOSTLY HARMLESS</p>
 				<img src='/img/marvin-small.svg' class='img-responsive pull-right' alt='marvin'>

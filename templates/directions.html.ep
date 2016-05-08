@@ -2,14 +2,14 @@
 
 <h1>Directions</h1>
 
-% foreach my $line ( @{ $event->{address} } ) {
+% foreach my $line ( @{ event->{address} } ) {
 <h3><%= $line %></h3>
 % }
 
 <br>
 
-<p><%= $event->{directions} %></p>
-<p><a href="<%= $event->{map} %>">Google maps.</a><p>
+<p><%= event->{directions} %></p>
+<p><a href="<%= event->{map} %>">Google maps.</a><p>
 <br>
 <div class="embed-responsive embed-responsive-16by9" style="max-width: 60%; margin-left: auto; margin-right: auto;">
 	<iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d46993.35470866293!2d-71.75846205234113!3d42.5959470748843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x89e3e84836bbce91%3A0xb20bf9597d662097!2sChester+Mossman+Teen+Center%2C+15+Memorial+Dr%2C+Lunenburg%2C+MA+01462!3m2!1d42.5959522!2d-71.7241293!5e0!3m2!1sen!2sus!4v1437803043340" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
