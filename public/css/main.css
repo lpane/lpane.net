@@ -132,10 +132,20 @@ footer ul .staff-position {
 #marvin-home  {
 	margin-top: 15px;
 }
+@media (max-width: 992px) {
+	iframe {
+		float: center;
+	}
+}
 /* ****
   03 - Modules
 **** */
-
+/* Hide top-bar, show mobile-nav */
+@media (max-width: 992px) {
+	.top-bar {
+		display: none;
+	}
+}
 .navbar-fixed-top .container-fluid {
   padding: 2px 10px;
   height: 50px;
@@ -158,8 +168,11 @@ footer ul .staff-position {
 	padding: 25px auto;
 	width: 100%;
 }
+.navbar .collapse ul{
+	background: #424549;
+}
 	/* Fix Breakpoint */
-@media (max-width: 992px) {
+/*@media (max-width: 992px) {
   .navbar-header {
     float: none;
   }
@@ -184,7 +197,7 @@ footer ul .staff-position {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-}
+}*/
 	/* Navbar Animation */
 .navbar-toggle {
   border: none;
@@ -278,21 +291,6 @@ footer ul .staff-position {
     margin-left: 20px;
   }
 }
-/*@media (min-width: 786px) {
-  #rightAside div{
-    min-height: 200px;
-  }
-  #updates {
-    border-left: 5px solid #F1654C;
-  }
-  #community {
-    border-left: 5px solid #3E4651;
-  }
-  #blog {
-    border-left: 5px solid #00B5B5;
-  }
-}*/
-
 #updates {
   border-top: 5px solid #F1654C;
 }
@@ -361,57 +359,4 @@ footer ul .staff-position {
 }
 .mh-member-profile.active {
     display: block;
-}
-
-
-/* Animations */
-/* Icon Up */
-@-webkit-keyframes hvr-icon-up {
-  0%,
-  50%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  25%,
-  75% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-}
-
-@keyframes hvr-icon-up {
-  0%,
-  50%,
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  25%,
-  75% {
-    -webkit-transform: translateY(-6px);
-    transform: translateY(-6px);
-  }
-}
-
-/* Bounce In */
-.hvr-bounce-in {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-}
-.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
-  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }

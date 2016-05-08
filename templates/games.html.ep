@@ -5,7 +5,7 @@
 	<h1><span class='accent'>Games</span> MH Loves</h1>
 	<p class='text-muted'>When you attend a MH LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
 
-	<div class='col-xs-6 game-description'>
+	<div class='col-xs-12 col-md-6 game-description'>
 		<h3>Dirty Bomb</h3>
 		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
 		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
@@ -13,34 +13,34 @@
 		<br>
 		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
 	</div>
-	<div class='col-xs-6 game-preview'>
+	<div class='col-xs-12 col-md-6 game-preview'>
 		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
 	</div>
 	<hr>
 
-	<div class='col-xs-6 game-description clearfix'>
-		<h3>Golden Eye Source</h3>
-		<p class='text-muted'>FPS | Free</p>
+	<div class='col-xs-12 col-md-6 game-description'>
+		<h3>Dirty Bomb</h3>
+		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
 		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
 		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
 		<br>
 		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
 	</div>
-	<div class='col-xs-6 game-preview'>
-		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/YQRKlQox-OQ" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	<div class='col-xs-12 col-md-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
 	</div>
 	<hr>
 
-	<div class='col-xs-6 game-description clearfix'>
-		<h3>Team Fortress</h3>
+	<div class='col-xs-12 col-md-6 game-description'>
+		<h3>Dirty Bomb</h3>
 		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
-		<p>"Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!" <span class='text-muted'>- via Steam</span></p>
+		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
 		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
 		<br>
 		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
 	</div>
-	<div class='col-xs-6 game-preview'>
-		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/h_c3iQImXZg" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	<div class='col-xs-12 col-md-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
 	</div>
 
 </section>

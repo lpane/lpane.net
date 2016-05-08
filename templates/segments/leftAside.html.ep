@@ -10,10 +10,9 @@
 
   <div id='connect' class='col-xs-12'>
     <h3>Connect</h3>
-    <img src='http://stjuliansprimary.com/wp-content/uploads/2013/12/twitter-logo-grey-copy.png' class='img-responsive col-xs-3'>
-    <img src='http://rubymediagroup.com/wp-content/uploads/2014/03/Google+.png' class='img-responsive col-xs-3'>
-    <img src='http://cforjustice.org/wp-content/uploads/2015/05/youTube_grey_footer.png' class='img-responsive col-xs-3'>
-    <img src='http://stjuliansprimary.com/wp-content/uploads/2013/12/twitter-logo-grey-copy.png' class='img-responsive col-xs-3'>
+    <img src='img/twitter-icon.svg' class='img-responsive col-xs-4'>
+    <img src='img/steam-icon.svg' class='img-responsive col-xs-4'>
+    <img src='img/facebook-icon.svg' class='img-responsive col-xs-4'>
     <br>
     <p><strong class='col-xs-12'>Social Media</strong><br>Subscribe to our newsletter</p>
   </div>
