@@ -40,8 +40,20 @@ helper event => sub {
 		# Lazy load event details
 		my $event = $c->_getConfig('event');
 
-		#TODO check start and end dates
+		$event->{reg_open_date} = Mojo::Date->new( $event->{reg_open_date} )->epoch;
+		$event->{reg_close_date} = Mojo::Date->new( $event->{reg_close_date} )->epoch;
 
+		my $current_time = Mojo::Date->new()->epoch;
+
+		if( $event->{reg_open_date} <= $current_time && $current_time <= $event->{reg_close_date} ) {
+			$event->{open} = 1;
+		} else {
+			return {
+				open => 0
+			};
+		}
+
+		# Load game definitions
 		my @games;
 		foreach my $game ( @{ $event->{games} } ) {
 			push( @games, $c->games->{ $game } );
