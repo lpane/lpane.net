@@ -1,16 +1,16 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
-		<h1><span class='accent'>About</span> MH</h1>
+		<h1><span class='accent'>About</span> =MH=</h1>
+		<p class='text-muted'>The only thing worse than the consequences of all the soda you drank at your last LAN is attending a crummy one hosted by dispasionate people. Fear not, Mostly Harmless is here now.</p>
+		<h4>What Makes an MH LAN Different?</h4>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab iste assumenda autem iusto, ipsa fuga quam nemo at fugiat quidem corrupti possimus minus iure asperiores, deleniti quasi magni in beatae.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
 		</p>
-		<p class='big'>Appreciations:</p>
-		<ul>
-			<li>Person 1</li>
-			<li>Person 1</li>
-			<li>Person 1</li>
-		</ul>
+		<h4>What Makes an MH LAN Different?</h4>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
+		</p>
 	</section>
 
 	<section class='col-xs-12' id='unique official-staff'>
