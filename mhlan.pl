@@ -19,10 +19,7 @@ app->config(
 	}
 );
 
-my $event = getConfig('event');
-
 app->defaults({
-	event	=> $event,
 	sidebar	=> [
 		{ name => "Home", href	=> "/" },
 		{ name => "Register", href	=> "/register" },
@@ -30,18 +27,68 @@ app->defaults({
 		{ name => "About", href => "/about" },
 		{ name => "Contact", href	=> "/contact" },
 	],
-	error	=> {},
-	fields	=> {},
-	header	=> 1,
-	autosubmit	=> 0
+	error   => {},
+	fields  => {},
+	header  => 1,
+	autosubmit => 0
 });
 
+helper event => sub {
+	my ($c) = @_;
+
+	if( !defined $c->stash->{event} ) {
+		# Lazy load event details
+		my $event = $c->_getConfig('event');
+
+		$event->{reg_open_date} = Mojo::Date->new( $event->{reg_open_date} )->epoch;
+		$event->{reg_close_date} = Mojo::Date->new( $event->{reg_close_date} )->epoch;
+
+		my $current_time = Mojo::Date->new()->epoch;
+
+		if( $event->{reg_open_date} <= $current_time && $current_time <= $event->{reg_close_date} ) {
+			$event->{open} = 1;
+		} else {
+			return {
+				open => 0
+			};
+		}
+
+		# Load game definitions
+		my @games;
+		foreach my $game ( @{ $event->{games} } ) {
+			push( @games, $c->games->{ $game } );
+		}
+
+		$event->{games} = \@games;
+
+		$c->stash( event => $event );
+	}
+
+	return $c->stash->{event};
+};
+
+helper games => sub {
+	my ($c) = @_;
+
+	if( !defined $c->stash->{games} ) {
+		$c->stash( games => $c->_getConfig('games') );
+	}
+
+	return $c->stash->{games};
+};
+
+helper _getConfig => sub {
+	my ($c, $name) = @_;
+
+	my $file = Mojo::Asset::File->new( path => "config/$name.json" );
+	return decode_json( $file->slurp );
+};
 
 any '/' => sub {
-  my ($c) = @_;
+	my ($c) = @_;
 
-  $c->stash( title => 'Home', header => 0 );
-  $c->render( template => 'index' );
+	$c->stash( title => 'Home', header => 0 );
+	$c->render( template => 'index' );
 };
 
 any '/games' => sub {
@@ -55,7 +102,7 @@ get '/register' => sub {
 	my ($c) = @_;
 
 	my $register = MostlyHarmless::Register->new();
-	my $available_seats = $event->{seats} - $register->seatsTaken();
+	my $available_seats = $c->event->{seats} - $register->seatsTaken();
 
 	$c->stash( title => 'Register', available_seats => $available_seats );
 	$c->render( template => 'register' );
@@ -65,7 +112,7 @@ post '/register' => sub {
 	my ($c) = @_;
 
 	my $register = MostlyHarmless::Register->new();
-	$c->stash( available_seats => $event->{seats} - $register->seatsTaken() );
+	$c->stash( available_seats => $c->event->{seats} - $register->seatsTaken() );
 
 	my $params = $c->req->params->to_hash;
 
@@ -148,11 +195,11 @@ any '/register/pay/:paypal_id' => sub {
 
 	my $paypal = Business::PayPal->new();
 	my $button = $paypal->button(
-		business	=> $event->{paypal_email},
+		business	=> $c->event->{paypal_email},
 		item_name	=> 'Mostly Harmless LAN Registration',
 		return		=> "http://mhlan.com/register/pay/$paypal_id",
 		cancel_return	=> "http://mhlan.com",
-		amount	=> $event->{price},
+		amount	=> $c->event->{price},
 		quantity	=> 1,
 		notify_url	=> "http://mhlan.com/register/verify",
 		custom	=> $paypal_id
@@ -172,7 +219,7 @@ any '/register/verify' => sub {
 	my $paypal = Business::PayPal->new( id => $paypal_id );
 	my ($txnstatus, $reason) = $paypal->ipnvalidate( $params );
 
-	if( $txnstatus && $params->{payment_gross} eq $event->{price} ) {
+	if( $txnstatus && $params->{payment_gross} eq $c->event->{price} ) {
 		# Add user to paid table
 		my $register = MostlyHarmless::Register->new();
 		$register->setPaid( $paypal_id );
@@ -183,7 +230,7 @@ any '/register/verify' => sub {
 		my $message = <<"BODY";
 $attendee->{firstname} "$attendee->{handle}" $attendee->{lastname},
 
-I have received your payment of \$$event->{price}. You are now registered for the Mostly Harmless LAN party.
+I have received your payment of \$$c->event->{price}. You are now registered for the Mostly Harmless LAN party.
 
 Thanks,
 The Mostly Harmless Robot
@@ -232,10 +279,3 @@ any '/about' => sub {
 };
 
 app->start;
-
-sub getConfig {
-	my ($name) = @_;
-
-	my $file = Mojo::Asset::File->new( path => "config/$name.json" );
-	return decode_json( $file->slurp );
-}

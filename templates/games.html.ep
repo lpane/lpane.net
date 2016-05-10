@@ -5,47 +5,25 @@
 	<h1><span class='accent'>Games</span> MH Loves</h1>
 	<p class='text-muted'>When you attend a MH LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
 
-	<div class='col-xs-12 col-md-6 game-description'>
-		<h3>Dirty Bomb</h3>
-		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
-		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
-		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
-		<br>
-		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
-	</div>
-	<div class='col-xs-12 col-md-6 game-preview'>
-		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
-	</div>
+	% foreach my $game ( @{ event->{games} } ) {
+		<div class='col-xs-12 col-md-6 game-description'>
+			<h3><%= $game->{title} %></h3>
+			<p class='text-muted'><%= $game->{type} %> | <%= $game->{price} %></p>
+			<p><%= $game->{description} %></p>
+			<%= link_to $game->{link}->{name} => $game->{link}->{href} %>
+			<br>
+		</div>
+		<div class='col-xs-12 col-md-6 game-preview'>
+			% if( $game->{media}->{type} eq "youtube" ) {
+				<iframe max-width="560" max-height="315" src="<%= $game->{media}->{src} %>" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+			% }
+		</div>
 	<hr>
-
-	<div class='col-xs-12 col-md-6 game-description'>
-		<h3>Dirty Bomb</h3>
-		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
-		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
-		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
-		<br>
-		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
-	</div>
-	<div class='col-xs-12 col-md-6 game-preview'>
-		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
-	</div>
-	<hr>
-
-	<div class='col-xs-12 col-md-6 game-description'>
-		<h3>Dirty Bomb</h3>
-		<p class='text-muted'>FPS, Team, Class-Based | Free</p>
-		<p>"Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around." <span class='text-muted'>- via Steam</span></p>
-		<a href='http://store.steampowered.com/app/333930/'>Get it on Steam</a>
-		<br>
-		<a href='#' class='trailer-trigger'>Watch the Trailer</a>
-	</div>
-	<div class='col-xs-12 col-md-6 game-preview'>
-		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
-	</div>
+	% }
 
 </section>
 
-	%= include 'segments/announcements'
+%= include 'segments/announcements'
 
 </div>
 

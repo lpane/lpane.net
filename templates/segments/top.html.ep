@@ -29,7 +29,7 @@
 					</div>
 				</div>
 			</nav>
-			<!-- <p class="header"><%= $event->{header} if $header %></p> -->
+			<!-- <p class="header"><%= event->{header} if $header %></p> -->
 			<div class='top-bar'>
 				<div class='col-xs-12 no-padding top-bar-wrap'>
 					<p class='oswald strong col-sm-3'>MOSTLY HARMLESS</p>
