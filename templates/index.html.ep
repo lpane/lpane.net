@@ -3,19 +3,26 @@
 	<section class='col-xs-12' id='unique index'>
 
 		<!-- Text container -->
-		<div class='col-xs-12 col-sm-8'>
-			<h1><span class='accent'>Hola</span> LAN Lovers</h1>
-			<h3>Welcome to Mostly Harmless LAN</h3>
-			<p>Mostly Harmless is a group of guys and gals that organize LAN parties across Massachusetts.<br><br>Expolore our site, read our <a href='#' class='accent'>blog</a>, or follow us on our social media accounts to get to know us and stay in the loop by subscribing to our <a href='#' class='accent'>newsletter</a>.<br><br>Learn more about us and our staff <a href='#' class='accent'>here</a>.
-			</p>
+		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center;'>
+			<img src='img/marvin.png' class='img-responsive' id='marvin-home'>
+			<div style='align-self: center'>
+				<h1 class=''><span class='accent'>Hola</span> LAN Lovers</h1>
+				<h3 style='font-weight: 300; margin-bottom: 15px;'>Welcome to Mostly Harmless LAN</h3>
+			</div>
+			<hr>
+		</div>
+		<div class='col-sm-6'>
+			<b>What's Mostly Harmless?</b>
+			<p>Love PC games? Us too! Mostly Harmless is a group of guys and gals that play games together and organize LANs for others across Massachusetts.</p>
 		</div>
 
 		<!-- Image container -->
-		<div class='col-xs-12 col-sm-4' id='img-container'>
-			<img src='img/marvin.png' class='img-responsive' id='marvin-home'>
+		<div class='col-sm-6'>
+			<p><b>Next LAN: </b> July 23, 2016</p>
+			<p><b>Registration: </b> Open</p>
 			<hr>
-			<button type="button" class="btn btn-default">Register <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
-			<p>Have people login or reigster for the site</p>
+			<p><b>Groups: </b> Facebook, Steam</p>
+			<p><b>Servers: </b> ARK, GO</p>
 		</div>
 	</section>
 

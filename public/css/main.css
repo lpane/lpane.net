@@ -19,6 +19,7 @@ body {
   .container {
     max-width: 1200px;
     margin: auto;
+		padding-top: 20px;
   }
 }
 hr {
@@ -53,6 +54,12 @@ ul {
 }
 .oswald {
   font-family: 'Oswald', sans-serif;
+}
+.thin {
+	font-weight: 300;
+}
+.all-caps {
+	text-transform: uppercase;
 }
 /* 01 : Buttons */
 form button {
@@ -108,29 +115,61 @@ section, #leftAside div {
   #mobile-nav {
     display: none
   }
+	#unique {
+		padding: 20px 60px;
+	}
+	#unique p:first-of-type {
+		margin-bottom: 45px;
+	}
+	#unique h4 {
+		margin-top: 25px;
+		font-weight: 400;
+	}
+}
+@media (max-width: 992px) {
+	#unique {
+		padding: 20px;
+	}
+	#unique p:first-of-type {
+		margin-bottom: 15px;
+	}
 }
 #unique#index  {
   padding: 0px;
 }
 
+/*	02 - Footer */
 footer {
   background: #2E3135;
   color: white;
   padding: 15px 0;
-	display: table-cell;
-  vertical-align: bottom;
-  float: none;
 }
-footer ul {
-  list-style: none;
-  padding-left: 0;
+footer #top {
+	width: 400px;
+	display: flex;
 }
-footer ul .staff-position {
-  padding-left: 8px;
-  color: blue;
+footer #right #top, ul {
+	width: 100%;
+}
+footer #right #top img {
+	width: 100px;
+	margin: auto 25px auto 0px;
+}
+footer #right #top div {
+	width: 275px;
+	text-align: center;
+}
+footer #right #top div hr {
+	margin: 0 auto 10px auto;
+	padding: 0;
+}
+footer #right ul {
+	max-width: 250px;
+	clear: both;
 }
 #marvin-home  {
 	margin-top: 15px;
+	max-height: 200px;
 }
 @media (max-width: 992px) {
 	iframe {
@@ -171,33 +210,24 @@ footer ul .staff-position {
 .navbar .collapse ul{
 	background: #424549;
 }
-	/* Fix Breakpoint */
-/*@media (max-width: 992px) {
-  .navbar-header {
-    float: none;
-  }
-	.navbar-toggle {
-    display: block;
-  }
-  .navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-collapse.collapse {
-    display: none!important;
-  }
-  .navbar-nav {
-    float: none!important;
-    margin: 7.5px -15px;
-  }
-  .navbar-nav>li {
-    float: none;
-  }
-  .navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-}*/
+	/* Fix Mobile Nav Breakpoint Issue*/
+@media (min-width: 768px)
+{
+    .navbar-header
+    {
+        float: none;
+    }
+
+    .navbar-toggle
+    {
+        display: block;
+    }
+
+    .navbar-collapse.collapse
+    {
+        display: none !important;
+    }
+}
 	/* Navbar Animation */
 .navbar-toggle {
   border: none;
@@ -273,13 +303,16 @@ footer ul .staff-position {
   border: solid 1px white;
   color: white;
   text-transform: uppercase;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
 	width: 100%;
 }
 #leftAside nav span {
 	text-align: right;
+}
+#leftAside ul #home-button {
+	background: #3E4651;
+	padding-left: 10px;
 }
 /* Right Aside */
 #rightAside {

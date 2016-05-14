@@ -2,6 +2,7 @@
 <div class='col-sm-3 col-lg-2' id='leftAside'>
 	<nav role="navigation">
 		<ul class="nav nav-pills nav-stacked">
+				<a href='inxex' id='home-button'><img src='img/mh-typography.svg' class='img-responsive'></a>
 			% foreach my $item ( @{ $sidebar } ) {
 				<a href="<%= $item->{href} %>"><%= $item->{name} %><span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
 			% }
