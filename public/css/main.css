@@ -10,7 +10,7 @@ body {
   margin: auto;
 }
 #page-wrap {
-	min-height: 100vh;
+	min-height: 90vh;
 }
 @media (min-width:768px){
   .container{width:auto;}
@@ -19,7 +19,7 @@ body {
   .container {
     max-width: 1200px;
     margin: auto;
-		padding-top: 20px;
+		padding-top: 50px;
   }
 }
 hr {
@@ -82,6 +82,9 @@ section, #leftAside div {
   padding: 5px 10px;
   display: flex;
   align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
 }
 .top-bar .top-bar-wrap {
 	max-width: 1400px;
@@ -90,10 +93,18 @@ section, #leftAside div {
 .top-bar p {
   font-size: 24px;
 }
-.top-bar #event-banner p{
-  color: white;
-  font-size: 16px;
-  font-weight: 300;
+.top-bar .ticker-container {
+	overflow: hidden;
+	margin: auto;
+}
+.top-bar .ticker-container .ticker-text {
+	white-space: nowrap;
+	display: inline-block;
+}
+.top-bar .ticker-container .ticker-text p {
+	color: #EFEBE9;
+	font-size: 16px;
+	margin-top: 5px;
 }
 .top-bar img {
   height: 35px;
@@ -143,29 +154,40 @@ footer {
   background: #2E3135;
   color: white;
   padding: 15px 0;
+	position: absolute;
+}
+footer .footer-container {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+footer #left, #right {
+	max-width: 250px;
+}
+footer #left {
+	max-width: 210px;
 }
 footer #top {
 	width: 400px;
 	display: flex;
 }
-footer #right #top, ul {
-	width: 100%;
-}
-footer #right #top img {
-	width: 100px;
-	margin: auto 25px auto 0px;
+footer #right img {
+	width: 50px;
 }
 footer #right #top div {
-	width: 275px;
 	text-align: center;
+	width: 180px;
+	margin-left: 20px;
 }
 footer #right #top div hr {
 	margin: 0 auto 10px auto;
 	padding: 0;
 }
 footer #right ul {
-	max-width: 250px;
-	clear: both;
+	margin-top: 15px;
+	padding-left: 0;
 }
 #marvin-home  {
 	margin-top: 15px;
@@ -196,16 +218,13 @@ footer #right ul {
 .navbar .collapse ul li a {
   color: white;
 	font-size: 16px;
+	font-weight: 300;
 }
 .navbar .collapse ul li {
 	height: 50px;
 }
 .navbar .collapse {
 	background: #424549;
-	/* 50px * #Links */
-	height: 250px;
-	padding: 25px auto;
-	width: 100%;
 }
 .navbar .collapse ul{
 	background: #424549;
@@ -270,15 +289,15 @@ footer #right ul {
 
   /* Hovers */
 .navbar .navbar-brand:hover{
-  color: red;
+  color: tomato;
 }
 .navbar .collapse ul li a:hover {
-  color: red;
+  color: tomato;
 }
 
   /* Active */
 .navbar .collapse ul li a:active {
-  color: yellow;
+  color: tomato;
 }
 #leftAside {
   background-color: none;
@@ -318,11 +337,25 @@ footer #right ul {
 #rightAside {
   padding: 0;
 }
+#rightAside div {
+	padding-bottom: 15px;
+}
+#rightAside h3 {
+	margin-bottom: 15px;
+}
+#rightAside div p {
+	margin: 5px auto 10px auto;
+}
 @media (min-width: 909px) and (max-width: 1200px) {
   #rightAside {
     float: left;
     margin-left: 20px;
   }
+}
+@media (max-width: 909px) {
+	#rightAside {
+		display: none;
+	}
 }
 #updates {
   border-top: 5px solid #F1654C;
@@ -392,4 +425,88 @@ footer #right ul {
 }
 .mh-member-profile.active {
     display: block;
+}
+
+/* Steam Api */
+#unique #steam-api-login {
+  max-width: 450px;
+  height: 350px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+#unique #steam-api-login header {
+  border-top: solid 6px tomato;
+  padding: 10px;
+}
+#steam-api-login header h3 {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 0;
+}
+#steam-api-login header img {
+  height: 50px;
+  width: auto;
+  margin-bottom: 0;
+}
+#steam-api-login .form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+#steam-api-login .form .input-wrap:first-of-type {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#steam-api-login .form .input-wrap:last-of-type {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#steam-api-login .form .input-wrap {
+  width: 290px;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-around;
+  align-content: baseline;
+}
+@media only screen and (max-width: 992px) {
+	#steam-api-login {
+		padding: 0;
+	}
+}
+#steam-api-login .form .input-wrap img {
+  width: auto;
+  height: 18px;
+  margin: auto;
+  align-self: baseline;
+}
+#steam-api-login .form .input-wrap input {
+  width: 250px;
+  height: 20px;
+  margin: 0;
+  border: none;
+  font-size: 14px;
+  background: none;
+  border-bottom: #d4d4d4 solid 1px;
+}
+#steam-api-login .form .input-wrap input:focus {
+  outline: none;
+  border-bottom: solid 2px lime;
+}
+#steam-api-login button {
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  margin: 10px auto auto auto;
+  border-radius: 10px;
+  background: #2E3135;
+  border: none;
+  color: white;
+  font-size: 14px;
+}
+#steam-api-login p {
+  font-size: 12px;
+  margin-top: 45px;
+  color: grey;
 }

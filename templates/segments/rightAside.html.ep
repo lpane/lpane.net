@@ -1,22 +1,22 @@
 <!-- Updates, Community, Blog -->
 <section id='rightAside' class=' col-xs-12 col-sm-3 col-md-8 col-lg-2 col-lg-offset-0'>
-  <div id ='updates' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+
+	<div id ='updates' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Updates</h3>
     <strong>Fall LAN Registration is Now Open!</strong>
-    <p class='muted'>Secure your seat and vote for games today!</p>
+    <p class='text-muted'>Secure your seat and vote for games today! <a href='#'>Register now</a></p>
   </div>
-  <div id ='community' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+
+	<div id ='community' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Community</h3>
-
-    <strong>MH Members</strong>
-    <p class='muted'>Lorem ipsum dolor sit amet, consecteutur adipiscing.</p>
-
-    <strong>Official Staff</strong>
-    <p class='muted'>Lorem ipsum dolor sit amet, consecteutur adipiscing.</p>
+    <strong>Join Us</strong>
+    <p class='text-muted'>Why wait until the next LAN? Join us on <a href="#">Steam</a>, or play in our <a href="#">servers</a>.</p>
   </div>
-  <div id ='blog' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+
+	<div id ='blog' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Blog</h3>
     <strong>Never a Dull Moment</strong>
-    <p class='muted'>Watch us make the LANs by following us on social medias and reading our blog.</p>
+    <p class='text-muted'>Watch us make the LANs by following us on social medias and reading our blog.</p>
   </div>
+
 </section>
