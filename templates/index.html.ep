@@ -16,14 +16,6 @@
 			<p>Love PC games? Us too! Mostly Harmless is a group of guys and gals that play games together and organize LANs for others across Massachusetts.</p>
 		</div>
 
-		<!-- Image container -->
-		<div class='col-sm-6'>
-			<p><b>Next LAN: </b> July 23, 2016</p>
-			<p><b>Registration: </b> Open</p>
-			<hr>
-			<p><b>Groups: </b> Facebook, Steam</p>
-			<p><b>Servers: </b> ARK, GO</p>
-		</div>
 	</section>
 
 	%= include 'segments/announcements'

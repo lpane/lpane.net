@@ -2,28 +2,30 @@
 		</div><!-- /.container -->
 		<div class='container-fluid'>
 			<footer class='col-xs-12'>
-				<div class='col-xs-6 col-sm-4 col-md-3'>
-					<img src='img/mh-typography.svg' class='img-responsive'>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore explicabo animi labore error nisi.</p>
-				</div>
-				<div class='col-xs-6 col-sm-4 col-sm-offset-4 col-md-3 col-md-offset-6' id='right'>
-					<div id='top'>
-						<img src='/img/marvin-small.svg' class='img-responsive' alt='marvin'>
-						<div>
-							<h3 class='oswald accent all-caps'>Can I Be Admin?</h3>
-							<hr>
-							<p class='thin'>Mostly Harmless Staff</p>
-						</div>
+				<div class='footer-container no-padding'>
+					<div id='left'>
+						<img src='img/mh-typography.svg' class='img-responsive'>
+						<p style='font-weight: 300;'>Mostly Harmless organizes LAN parties across Massachusetts. All inquiries and comments can be directed to this@email.com</p>
 					</div>
-					<ul>
-						<li>Spacey</li>
-						<li>Spacey</li>
-						<li>Spacey</li>
-					</ul>
 
+					<div id='right'>
+						<div id='top'>
+							<img src='/img/marvin-small.svg' class='img-responsive' alt='marvin'>
+							<div>
+								<h3 class='oswald accent all-caps'>Can I Be Admin?</h3>
+								<hr>
+								<p class='thin'>Mostly Harmless Staff</p>
+							</div>
+						</div>
+						<ul>
+							<li>Spacey</li>
+							<li>Spacey</li>
+							<li>Spacey</li>
+						</ul>
+					</div>
 				</div>
 			</footer>
 		</div> <!-- /.container-fluid -->
-		<script src="public/js/scripts.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>

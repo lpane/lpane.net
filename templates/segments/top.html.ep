@@ -29,15 +29,14 @@
 					</div>
 				</div>
 			</nav>
-			<!-- <p class="header"><%= event->{header} if $header %></p> -->
 			<div class='top-bar'>
 				<div class='col-xs-12 no-padding top-bar-wrap'>
 					<p class='oswald strong col-sm-3'>MOSTLY HARMLESS</p>
-					<div class='col-sm-6 text-center' id='event-banner'>
-
-						<!-- Put event info here in the banner-->
-						<p>Next LAN Party: Date, Place, Price</p>
-
+					<div class='col-sm-6 ticker-container' id='event-banner'>
+						<div class='ticker-text'>
+							<!-- Put event info here in the banner-->
+							<p>Next LAN Party: Date, Place, Price</p>
+						</div>
 					</div>
 					<div class='col-sm-3 text-right no-padding'>
 						<img src='/img/marvin-small.svg' class='img-responsive' alt='marvin'>

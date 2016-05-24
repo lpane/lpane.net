@@ -1,61 +1,78 @@
 %= include 'segments/top'
+	<section class='col-xs-12' id='unique'>
 
-<section class='col-xs-12' id='unique'>
+		<h1><span class='accent'>Register</span> for MH LAN</h1>
 
-	<h1><span class='accent'>Register</span> for MH LAN</h1>
+		% if( $available_seats > 0 ) {
 
-	% if( $available_seats > 0 ) {
+		<hr>
+		<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. Fill out and submit the form below to begin the registration process.</p>
 
-	<hr>
-	<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. Fill out and submit the form below to begin the registration process.</p>
+		<!-- <p>Registration is currently open. The price of admission is $<%= event->{price} %>. There are currently <b><%= $available_seats %></b> out of <%= event->{seats} %> seats available.</p> -->
 
-	<!-- <p>Registration is currently open. The price of admission is $<%= event->{price} %>. There are currently <b><%= $available_seats %></b> out of <%= event->{seats} %> seats available.</p> -->
 
-	<hr>
+		<!-- <form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
 
-	<form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
+			<div class="form-group form-group-lg">
+				<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
+				</div>
 
-		<div class="form-group form-group-lg">
-			<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
 			</div>
-			<!-- removed error text -- should a red outline on the input -->
-		</div>
 
 
-		<div class="form-group form-group-lg">
-			<label class="control-label col-sm-4 col-md-3" for="lastname">Last Name:</label>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
+			<div class="form-group form-group-lg">
+				<label class="control-label col-sm-4 col-md-3" for="lastname">Last Name:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
+				</div>
 			</div>
-		</div>
 
-		<div class="form-group form-group-lg">
-			<label class="control-label col-sm-4 col-md-3" for="email">Email:</label>
-			<div class="col-xs-12 col-sm-6">
-				<input type="email" class="form-control has-error has-feedback" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
+			<div class="form-group form-group-lg">
+				<label class="control-label col-sm-4 col-md-3" for="email">Email:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="email" class="form-control has-error has-feedback" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
+				</div>
 			</div>
-		</div>
 
-		<div class="form-group form-group-lg">
-			<label class="control-label col-sm-4 col-md-3" for="handle">Handle:</label>
-			<div class="col-xs-12 col-sm-6">
-				<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
+			<div class="form-group form-group-lg">
+				<label class="control-label col-sm-4 col-md-3" for="handle">Handle:</label>
+				<div class="col-xs-12 col-sm-6">
+					<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
+				</div>
 			</div>
-		</div>
 
-		<div class="form-group form-group-lg">
-			<div class="col-xs-8 col-sm-6 col-sm-offset-4 col-md-offset-3">
-				<button type="submit" class="btn btn-default btn-lg">Submit</button>
+			<div class="form-group form-group-lg">
+				<div class="col-xs-8 col-sm-6 col-sm-offset-4 col-md-offset-3">
+					<button type="submit" class="btn btn-default btn-lg">Submit</button>
+				</div>
 			</div>
+
+		</form> -->
+
+		% } else {
+			<h2>There are no more available seats.</h2>
+		% }
+
+
+		<div id="steam-api-login">
+		  <header>
+		    <h3>Register via Steam</h3><img src="http://findicons.com/files/icons/770/token_dark/128/steam.png"/>
+		  </header>
+		  <div class="form">
+		    <div class="input-wrap"><img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-alt-128.png"/>
+		      <input/>
+		    </div>
+		    <div class="input-wrap"><img src="https://cdn2.iconfinder.com/data/icons/app-types-in-grey/512/lock_512pxGREY.png"/>
+		      <input/>
+		    </div>
+		    <button>Submit</button>
+		    <p>Learn more about the Steam Login API</p>
+		  </div>
 		</div>
-
-	</form>
-
-	% } else {
-		<h2>There are no more available seats.</h2>
-	% }
-</section>
-
+	</section>
+	%= include 'segments/announcements'
+</div>
+%= include 'segments/rightAside'
 %= include 'segments/bottom'
