@@ -2,11 +2,13 @@
 
 use Mojolicious::Lite;
 use Mojo::JSON qw( decode_json encode_json );
+use Mojo::Redis2;
 
 use FindBin;
 use JSON::Schema;
 use Business::PayPal;
 use MIME::Lite;
+use LWP::UserAgent;
 
 use lib "$FindBin::Bin/lib";
 use MostlyHarmless::Register;
@@ -32,6 +34,12 @@ app->defaults({
 	header  => 1,
 	autosubmit => 0
 });
+
+helper redis => sub {
+	my ($c) = @_;
+
+	$c->stash->{redis} ||= Mojo::Redis2->new();
+};
 
 helper event => sub {
 	my ($c) = @_;
@@ -75,6 +83,27 @@ helper games => sub {
 	}
 
 	return $c->stash->{games};
+};
+
+helper getArkPlayers => sub {
+	my ($c, $host) = @_;
+
+	my @players = ();
+
+	# TODO cache the response of this call in redis with an expire
+
+	my $ua = LWP::UserAgent->new();
+	$ua->timeout(5);
+
+	my $response = $ua->get("http://$host.mhclan.net/api/listplayers");
+
+	if( $response->is_success ) {
+		@players = @{ decode_json( $response->decoded_content )->{players} };
+	} else {
+		app->log->warn( "Error getting player list from $host: " . $response->status_line );
+	}
+
+	return @players;
 };
 
 helper _getConfig => sub {

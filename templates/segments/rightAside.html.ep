@@ -1,11 +1,7 @@
 <!-- Updates, Community, Blog -->
 <section id='rightAside' class=' col-xs-12 col-sm-3 col-md-8 col-lg-2 col-lg-offset-0'>
 
-	<div id ='updates' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
-    <h3>Updates</h3>
-    <strong>Fall LAN Registration is Now Open!</strong>
-    <p class='text-muted'>Secure your seat and vote for games today! <a href='#'>Register now</a></p>
-  </div>
+	%= include 'segments/rightAside/servers'
 
 	<div id ='community' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Community</h3>
@@ -17,6 +13,5 @@
     <h3>Blog</h3>
     <strong>Never a Dull Moment</strong>
     <p class='text-muted'>Watch us make the LANs by following us on social medias and reading our blog.</p>
-  </div>
 
 </section>

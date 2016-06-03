@@ -1,0 +1,6 @@
+<div id ='updates' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+	<h3>Servers</h3>
+
+	%= include 'segments/rightAside/servers/ark', title => 'Ark: Survival - The Center', host => 'ark-center'
+	%= include 'segments/rightAside/servers/ark', title => 'Ark: Survival - The Island', host => 'ark-island'
+</div>

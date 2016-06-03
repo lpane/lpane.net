@@ -7,13 +7,18 @@
 			<img src='img/marvin.png' class='img-responsive' id='marvin-home'>
 			<div style='align-self: center'>
 				<h1 class=''><span class='accent'>Hola</span> LAN Lovers</h1>
-				<h3 style='font-weight: 300; margin-bottom: 15px;'>Welcome to Mostly Harmless LAN</h3>
+				% if( event->{open} ) {
+					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration open!</h3>
+				% } else {
+					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
+				% }
 			</div>
 			<hr>
 		</div>
 		<div class='col-sm-6'>
 			<b>What's Mostly Harmless?</b>
-			<p>Love PC games? Us too! Mostly Harmless is a group of guys and gals that play games together and organize LANs for others across Massachusetts.</p>
+			<p>Love PC gaming? Us too!</p>
+			<p>Mostly Harmless is a Boston area group of guys and gals who play games together, run servers, and organize LANs across Massachusetts.</p>
 		</div>
 
 	</section>
