@@ -1,70 +1,20 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
-		<h1><span class='accent'>About</span> =MH=</h1>
+		<h1><span class='accent'>About</span> MH</h1>
 		<p class='text-muted'>The only thing worse than the consequences of all the soda you drank at your last LAN is attending a crummy one hosted by dispasionate people. Fear not, Mostly Harmless is here now.</p>
 		<h4>What Makes an MH LAN Different?</h4>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
 		</p>
-		<h4>What Makes an MH LAN Different?</h4>
+		<h4>Contact</h4>
+		<p>The name says it all - we're <i>mostly</i> harmless. If you have a question or comment please! - reach out, we'd love to hear it.</p>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
+			Contact us via email at: <a href='mailto:mhlan@gmail.com'>MHLan@gmail.com</a>
 		</p>
-	</section>
-
-	<section class='col-xs-12' id='unique official-staff'>
-		<h2 class='col-xs-12'>=MH= Official Staff</h2>
-		<div class='mh-member col-xs-3 activated' id='spacey'>
-			<hr>
-			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
-			<p class='text-muted'>Spacey0Monkey</p>
-			<hr>
-		</div>
-		<div class='mh-member col-xs-3' id='skunix'>
-			<hr>
-			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
-			<p class='text-muted'>Skunix</p>
-			<hr>
-		</div>
-		<div class='mh-member col-xs-3' id='wash'>
-			<hr>
-			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
-			<p class='text-muted'>Wash Your Hands</p>
-			<hr>
-		</div>
-		<div class='mh-member col-xs-3' id='spacey'>
-			<hr>
-			<img src='https://d13yacurqjgara.cloudfront.net/users/178919/screenshots/1633036/avatar_dribbble_1x.jpg' class='hvr-bounce-in'>
-			<p class='text-muted'>Spacey0Monkey</p>
-			<hr>
-		</div>
-
-		<!-- =MH= Profiles -->
-		<div class='col-xs-12 mh-member-profile' id='spacey'>
-			<h3 class='col-xs-12 accent'>Spacey0Moneky</h3>
-			<div class='col-xs-12 col-sm-8'>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime consequatur vero inventore perspiciatis labore sint numquam nisi, enim. Sunt quas minus quod voluptas nihil saepe nulla temporibus inventore doloremque. Temporibus.
-				</p>
-			</div>
-			<div class='col-xs-12 col-sm-4'>
-				<p><b>Position:</b> Our Fearless Leader</p>
-				<p><b>Favorite Game:</b> Our Fearless Leader</p>
-			</div>
-		</div>
-
-		<div class='col-xs-12 mh-member-profile' id='skunix'>
-			<h3 class='col-xs-12 accent'>Spacey0Moneky</h3>
-			<div class='col-xs-12 col-sm-8'>
-				<p>SKUNIX
-				</p>
-			</div>
-			<div class='col-xs-12 col-sm-4'>
-				<p><b>Position:</b> Our Fearless Leader</p>
-				<p><b>Favorite Game:</b> Our Fearless Leader</p>
-			</div>
-		</div>
+		<p>
+			Join our Facebook group: <a href='https://www.facebook.com/groups/911387732254295/'>Mostly Harmless</a>
+		</p>
 	</section>
 
 	%= include 'segments/announcements'

@@ -27,7 +27,7 @@ app->defaults({
 		{ name => "Register", href	=> "/register" },
 		{ name => "Games", href	=> "/games" },
 		{ name => "About", href => "/about" },
-		{ name => "Contact", href	=> "/contact" },
+		#{ name => "Contact", href	=> "/contact" },
 	],
 	error   => {},
 	fields  => {},

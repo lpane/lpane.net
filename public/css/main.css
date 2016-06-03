@@ -413,31 +413,6 @@ footer #right ul {
 #registration-form input.has-error {
   border-color: #F1654C;
 }
-/* Official Staff */
-.mh-member {
-  text-align: center;
-  cursor: pointer;
-}
-.mh-member.active hr {
-  border-color: #F1654C;
-}
-.mh-member.active p {
-  color: black;
-  font-weight: bold;
-}
-.mh-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0px auto 10px auto;
-    z-index: 1;
-}
-.mh-member-profile {
-  display: none;
-}
-.mh-member-profile.active {
-    display: block;
-}
 
 /* Steam Api */
 #unique #steam-api-login {
