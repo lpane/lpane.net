@@ -5,6 +5,6 @@
 			<li><%= link_to $player->{character_name} => "http://steamcommunity.com/profiles/$player->{steam_id}" %></li>
 	% 	}
 % } else {
-	<li>No players connected</li>
+	<li class='no-players'>No players connected</li>
 % }
 </ul>

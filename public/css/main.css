@@ -357,16 +357,28 @@ footer #right ul {
 		display: none;
 	}
 }
-#updates {
+
+/* Right Aside Border Styles */
+#rightAside div:nth-of-type(1) {
   border-top: 5px solid #F1654C;
 }
-#community {
+#rightAside div:nth-of-type(2)  {
   border-top: 5px solid #3E4651;
 }
-#blog {
+#rightAside div:nth-of-type(3)  {
   border-top: 5px solid #00B5B5;
 }
 
+/* Right Aside "Servers" Styles*/
+#rightAside div:nth-of-type(1) ul{
+	padding-left: 0;
+}
+#rightAside div:nth-of-type(1) ul li {
+	padding: 5px 8px;
+}
+#rightAside div:nth-of-type(1) .no-players {
+	color: grey;
+}
 /* Announcements */
 #announcement-wrapper strong{
   font-size: 18px;

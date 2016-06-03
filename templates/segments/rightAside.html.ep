@@ -3,13 +3,13 @@
 
 	%= include 'segments/rightAside/servers'
 
-	<div id ='community' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+	<div class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Community</h3>
     <strong>Join Us</strong>
     <p class='text-muted'>Why wait until the next LAN? Join us on <a href="#">Steam</a>, or play in our <a href="#">servers</a>.</p>
   </div>
 
-	<div id ='blog' class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+	<div class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
     <h3>Blog</h3>
     <strong>Never a Dull Moment</strong>
     <p class='text-muted'>Watch us make the LANs by following us on social medias and reading our blog.</p>
