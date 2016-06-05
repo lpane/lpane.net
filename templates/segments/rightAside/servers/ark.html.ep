@@ -1,10 +1,12 @@
 <strong><%= $title %></strong>
-<ul>
-% if( getArkPlayers($host) ) {
-	% 	foreach my $player ( getArkPlayers($host) ) {
-			<li><%= link_to $player->{character_name} => "http://steamcommunity.com/profiles/$player->{steam_id}" %></li>
-	% 	}
-% } else {
-	<li class='no-players'>No players connected</li>
-% }
-</ul>
+<div id='server-players-container'>
+	<ul>
+	% if( getArkPlayers($host) ) {
+		% 	foreach my $player ( getArkPlayers($host) ) {
+				<li><%= link_to $player->{character_name} => "http://steamcommunity.com/profiles/$player->{steam_id}" %></li>
+		% 	}
+	% } else {
+		<li class='no-players'>No players connected</li>
+	% }
+	</ul>
+</div>

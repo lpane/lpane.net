@@ -21,6 +21,38 @@
 	<hr>
 	% }
 
+	<div class='col-xs-12 col-md-6 game-description'>
+		<h3>Dirty Bomb</h3>
+		<p class='text-muted'>First Person Shooter| Free</p>
+		<p>Team Up, Yada Yada</p>
+		<a>Download</a>
+		<br>
+	</div>
+	<div class='col-xs-12 col-md-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
+	<hr>
+	<div class='col-xs-12 col-md-6 game-description'>
+		<h3>Dirty Bomb</h3>
+		<p class='text-muted'>First Person Shooter| Free</p>
+		<p>Team Up, Yada Yada</p>
+		<a>Download</a>
+		<br>
+	</div>
+	<div class='col-xs-12 col-md-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
+	<hr>
+	<div class='col-xs-12 col-md-6 game-description'>
+		<h3>Dirty Bomb</h3>
+		<p class='text-muted'>First Person Shooter| Free</p>
+		<p>Team Up, Yada Yada</p>
+		<a>Download</a>
+		<br>
+	</div>
+	<div class='col-xs-12 col-md-6 game-preview'>
+		<iframe max-width="560" max-height="315" src="https://www.youtube.com/embed/QFsfpKQgGJ8" frameborder="0" allowfullscreen class='trailer-video'></iframe>
+	</div>
 </section>
 
 %= include 'segments/announcements'
