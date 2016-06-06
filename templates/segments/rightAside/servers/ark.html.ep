@@ -1,4 +1,5 @@
 <strong><%= $title %></strong>
+<<<<<<< HEAD
 <div id='server-players-container'>
 	<ul>
 	% if( getArkPlayers($host) ) {

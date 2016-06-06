@@ -26,8 +26,7 @@ app->defaults({
 		{ name => "Home", href	=> "/" },
 		{ name => "Register", href	=> "/register" },
 		{ name => "Games", href	=> "/games" },
-		{ name => "About", href => "/about" },
-		#{ name => "Contact", href	=> "/contact" },
+		{ name => "About", href => "/about" }
 	],
 	error   => {},
 	fields  => {},
@@ -88,22 +87,38 @@ helper games => sub {
 helper getArkPlayers => sub {
 	my ($c, $host) = @_;
 
-	my @players = ();
+	my $key = "mhlan:servers:ark:$host";
 
-	# TODO cache the response of this call in redis with an expire
+	# Grab players out of stash or redis key
+	my $players_json = $c->stash->{ $key } || $c->redis->get( $key );
 
-	my $ua = LWP::UserAgent->new();
-	$ua->timeout(5);
+	my $players;
 
-	my $response = $ua->get("http://$host.mhclan.net/api/listplayers");
-
-	if( $response->is_success ) {
-		@players = @{ decode_json( $response->decoded_content )->{players} };
+	if( $players_json ) {
+		# Use cached players list
+		$players = decode_json( $players_json );
 	} else {
-		app->log->warn( "Error getting player list from $host: " . $response->status_line );
+		# If nothing found in stash or redis query API for list of ark players
+		my $ua = LWP::UserAgent->new();
+		$ua->timeout(5);
+
+		my $response = $ua->get("http://$host.mhclan.net/api/listplayers");
+
+		if( $response->is_success ) {
+			my $players_json = $response->decoded_content;
+
+			# Cache players in redis with expire
+			$c->redis->set( $key, $players_json );
+			$c->redis->expire( $key, 60 );
+
+			$players = decode_json( $players_json );
+		} else {
+			app->log->warn( "Error getting player list from $host: " . $response->status_line );
+			$players = { 'players' => [] };
+		}
 	}
 
-	return @players;
+	return @{ $players->{players} };
 };
 
 helper _getConfig => sub {
