@@ -7,7 +7,7 @@
 			<img src='img/marvin.png' class='img-responsive' id='marvin-home'>
 			<div style='align-self: center'>
 				<h1 class=''><span class='accent'>Hola</span> LAN Lovers</h1>
-				% if( event->{open} ) {
+				% if( event->open ) {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration open!</h3>
 				% } else {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
