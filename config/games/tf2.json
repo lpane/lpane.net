@@ -1,0 +1,13 @@
+{
+	"title": "Team Fortress 2",
+	"type": "FPS, Team, Class-Based",
+	"description": "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!",
+	"media": {
+		"type": "youtube",
+		"src": "https://www.youtube.com/embed/h_c3iQImXZg"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "http://store.steampowered.com/app/440/"
+	}
+}

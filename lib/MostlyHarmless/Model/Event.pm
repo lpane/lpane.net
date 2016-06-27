@@ -1,9 +1,17 @@
 package MostlyHarmless::Model::Event;
 
 use Moose;
+use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
+use MostlyHarmless::Model::Game;
+
+use Mojo::Date;
+
 with 'MostlyHarmless::Model::Role::Config';
+
+subtype 'ArrayOfGames' => as 'ArrayRef[MostlyHarmless::Model::Game]';
+coerce 'ArrayOfGames' => from 'ArrayRef[Str]' => via { [ map { MostlyHarmless::Model::Game->new($_) } @$_ ] };
 
 has 'open' => (
 	is  => 'ro',
@@ -53,10 +61,11 @@ has 'header' => (
 	required => 1
 );
 
-# TODO make games an ArrayRef[MostlyHarmless::Model::Game]
 has 'games' => (
-	is => 'ro',
-	required => 1
+	is  => 'ro',
+	isa => 'ArrayOfGames',
+	required => 1,
+	coerce   => 1
 );
 
 around BUILDARGS => sub {
@@ -71,16 +80,6 @@ around BUILDARGS => sub {
 
 	if( $event->{reg_open_date} <= $current_time && $current_time <= $event->{reg_close_date} ) {
 		$event->{open} = 1;
-
-		my $game_definitions = $class->_getConfig('games');
-
-		# Load game definitions
-		my @games;
-		foreach my $game ( @{ $event->{games} } ) {
-			push( @games, $game_definitions->{ $game } );
-		}
-
-		$event->{games} = \@games;
 	} else {
 		$event = {
 			open => 0
