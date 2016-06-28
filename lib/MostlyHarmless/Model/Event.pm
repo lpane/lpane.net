@@ -21,51 +21,44 @@ has 'open' => (
 
 has 'price' => (
 	is  => 'ro',
-	isa => 'Num',
-	required => 1
+	isa => 'Num'
 );
 
 has 'seats' => (
 	is  => 'ro',
-	isa => 'Int',
-	required => 1
+	isa => 'Int'
 );
 
 has 'paypal_email' => (
 	is  => 'ro',
-	isa => 'Str',
-	required => 1
+	isa => 'Str'
 );
 
 has 'address' => (
 	is  => 'ro',
-	isa => 'ArrayRef[Str]',
-	required => 1
+	isa => 'ArrayRef[Str]'
 );
 
 has 'directions' => (
 	is  => 'ro',
-	isa => 'Str',
-	required => 1
+	isa => 'Str'
 );
 
 has 'map' => (
 	is  => 'ro',
-	isa => 'Str',
-	required => 1
+	isa => 'Str'
 );
 
 has 'header' => (
 	is  => 'ro',
-	isa => 'Str',
-	required => 1
+	isa => 'Str'
 );
 
 has 'games' => (
 	is  => 'ro',
 	isa => 'ArrayOfGames',
-	required => 1,
-	coerce   => 1
+	coerce   => 1,
+	default  => sub { [] }
 );
 
 around BUILDARGS => sub {

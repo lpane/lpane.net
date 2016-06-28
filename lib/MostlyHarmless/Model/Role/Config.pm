@@ -10,6 +10,7 @@ sub _getConfig {
 	my ($self, $name) = @_;
 
 	my $file = Mojo::Asset::File->new( path => "config/$name.json" );
-	return decode_json( $file->slurp );
+
+	return $file->size ? decode_json( $file->slurp ) : undef;
 }
 1;
