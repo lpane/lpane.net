@@ -6,18 +6,40 @@
 		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center;'>
 			<img src='img/marvin.png' class='img-responsive' id='marvin-home'>
 			<div style='align-self: center'>
-				<h1 class=''><span class='accent'>Hola</span> LAN Lovers</h1>
+				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
+
 				% if( event->open ) {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration open!</h3>
 				% } else {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
 				% }
+
 			</div>
 			<hr>
 		</div>
-		<div class='col-sm-6'>
-			<b>What's Mostly Harmless?</b>
-			<p>Love PC gaming? Us too!</p>
+
+		% if( event->open ) {
+			<div class='col-sm-12'>
+				<h1>Directions</h1>
+
+				<br>
+
+				% foreach my $line ( @{ event->address } ) {
+					<p><%= $line %></p>
+				% }
+
+				<br>
+
+				<p><%= event->directions %></p>
+				<p><a href="<%= event->map %>">Google maps.</a></p>
+				<br>
+
+				<iframe class="embed-responsive-item" src="<%= event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+			</div>
+		% }
+
+		<div class='col-sm-12'>
+			<h1>What's Mostly Harmless?</h1>
 			<p>Mostly Harmless is a Boston area group of guys and gals who play games together, run servers, and organize LANs across Massachusetts.</p>
 		</div>
 
