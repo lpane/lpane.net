@@ -39,14 +39,17 @@ sub startup {
 		}));
 
 		push( @servers, MostlyHarmless::Model::Server::Ark->new({
-			title => "Ark: Survival - The Center",
-			host  => "ark-center"
+			title => "Ark: Survival - The Island",
+			host  => "ark-island"
 		}));
 
 		return \@servers;
 	}->()}});
 
 	my $r = $self->routes;
+
 	$r->route('/')->to('main#index');
+	$r->route('/games')->to('main#games');
+	$r->route('/about')->to('main#about');
 }
 1;

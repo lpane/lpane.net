@@ -1,5 +1,4 @@
-<strong><%= $title %></strong>
-<<<<<<< HEAD
+<strong><%= $server->title %></strong>
 <div id='server-players-container'>
 	<ul>
 	% if( my @players = $server->players ) {
