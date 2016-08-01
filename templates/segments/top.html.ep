@@ -35,7 +35,7 @@
 					<div class='col-sm-6 ticker-container' id='event-banner'>
 						<div class='ticker-text'>
 							<!-- Put event info here in the banner-->
-							<p><%= event->{header} %></p>
+							<p><%= $event->header %></p>
 						</div>
 					</div>
 					<div class='col-sm-3 text-right no-padding'>

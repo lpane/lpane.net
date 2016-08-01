@@ -1,7 +1,7 @@
 {
 	"header": "TEST LAN August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry",
 	"reg_open_date": "2016-05-07 00:00:00",
-	"reg_close_date": "2016-05-30 23:59:59",
+	"reg_close_date": "2016-08-30 23:59:59",
 	"seats": 30,
 	"price": 20.00,
 	"paypal_email": "packard.brian@gmail.com",
@@ -11,7 +11,7 @@
 		"Lunenburg, MA"
 	],
 	"directions": "The Teen Center is located between Lunenburg Town hall and Lunenburg Public Library. Memorial Drive runs parallel to Massachusetts Ave (route 2A) and perpendicular to Main St.",
-	"map": "https://www.google.com/maps/dir//Chester+Mossman+Teen+Center,+15+Memorial+Dr,+Lunenburg,+MA+01462/@42.5959285,-71.7979462,12z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x89e3e84836bbce91:0xb20bf9597d662097!2m2!1d-71.7241293!2d42.5959522!3e0",
+	"map": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d46993.35470866293!2d-71.75846205234113!3d42.5959470748843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x89e3e84836bbce91%3A0xb20bf9597d662097!2sChester+Mossman+Teen+Center%2C+15+Memorial+Dr%2C+Lunenburg%2C+MA+01462!3m2!1d42.5959522!2d-71.7241293!5e0!3m2!1sen!2sus!4v1437803043340",
 	"games": [
 		"dirty_bomb",
 		"tf2"
