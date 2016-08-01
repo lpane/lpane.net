@@ -25,9 +25,6 @@ sub startup {
 		autosubmit => 0
 	});
 
-	# Current event class
-	$self->helper( event => sub { state $event = MostlyHarmless::Model::Event->new() } );
-
 	# Array of game server classes
 	$self->helper( servers => sub { @{ state $servers = sub {
 		my ($self) = @_;
@@ -45,6 +42,11 @@ sub startup {
 
 		return \@servers;
 	}->()}});
+
+	$self->hook( before_dispatch => sub {
+		my ($c) = @_;
+		$c->stash( event => MostlyHarmless::Model::Event->new() );
+	});
 
 	my $r = $self->routes;
 

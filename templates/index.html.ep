@@ -8,7 +8,7 @@
 			<div style='align-self: center'>
 				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
 
-				% if( event->open ) {
+				% if( $event->open ) {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration open!</h3>
 				% } else {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
@@ -18,23 +18,23 @@
 			<hr>
 		</div>
 
-		% if( event->open ) {
+		% if( $event->open ) {
 			<div class='col-sm-12'>
 				<h1>Directions</h1>
 
 				<br>
 
-				% foreach my $line ( @{ event->address } ) {
+				% foreach my $line ( @{ $event->address } ) {
 					<p><%= $line %></p>
 				% }
 
 				<br>
 
-				<p><%= event->directions %></p>
-				<p><a href="<%= event->map %>">Google maps.</a></p>
+				<p><%= $event->directions %></p>
+				<p><a href="<%= $event->map %>">Google maps.</a></p>
 				<br>
 
-				<iframe class="embed-responsive-item" src="<%= event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+				<iframe class="embed-responsive-item" src="<%= $event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			</div>
 		% }
 

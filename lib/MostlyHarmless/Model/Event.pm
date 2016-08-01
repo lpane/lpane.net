@@ -63,7 +63,6 @@ has 'games' => (
 
 around BUILDARGS => sub {
 	my ($orig, $class) = @_;
-
 	my $event = $class->_getConfig('event');
 
 	$event->{reg_open_date} = Mojo::Date->new( $event->{reg_open_date} )->epoch;
