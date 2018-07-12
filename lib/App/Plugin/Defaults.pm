@@ -1,4 +1,4 @@
-package MostlyHarmless::Plugin::Defaults;
+package App::Plugin::Defaults;
 use Mojo::Base 'Mojolicious::Plugin';
 
 sub register {

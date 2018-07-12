@@ -1,4 +1,4 @@
-package MostlyHarmless::Controller::Login;
+package App::Controller::Login;
 use Mojo::Base 'Mojolicious::Controller';
 
 use Mojo::URL;

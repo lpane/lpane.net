@@ -1,9 +1,9 @@
-package MostlyHarmless::Model::Server::Ark;
+package App::Model::Server::Ark;
 
 use Moose;
 use namespace::autoclean;
 
-extends 'MostlyHarmless::Model::Server';
+extends 'App::Model::Server';
 
 augment '_uri' => sub {
 	my ($self) = @_;

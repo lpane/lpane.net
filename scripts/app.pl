@@ -8,4 +8,4 @@ use FindBin;
 use lib "$FindBin::Bin/../lib";
 use Mojolicious::Commands;
 
-Mojolicious::Commands->start_app('MostlyHarmless');
+Mojolicious::Commands->start_app('App');

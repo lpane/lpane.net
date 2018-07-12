@@ -1,4 +1,4 @@
-package MostlyHarmless::Model::Role::Redis;
+package App::Model::Role::Redis;
 
 use Moose::Role;
 

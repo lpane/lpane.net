@@ -1,17 +1,17 @@
-package MostlyHarmless::Model::Event;
+package App::Model::Event;
 
 use Moose;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
-use MostlyHarmless::Model::Game;
+use App::Model::Game;
 
 use Mojo::Date;
 
-with 'MostlyHarmless::Model::Role::Config';
+with 'App::Model::Role::Config';
 
-subtype 'ArrayOfGames' => as 'ArrayRef[MostlyHarmless::Model::Game]';
-coerce 'ArrayOfGames' => from 'ArrayRef[Str]' => via { [ map { MostlyHarmless::Model::Game->new($_) } @$_ ] };
+subtype 'ArrayOfGames' => as 'ArrayRef[App::Model::Game]';
+coerce 'ArrayOfGames' => from 'ArrayRef[Str]' => via { [ map { App::Model::Game->new($_) } @$_ ] };
 
 has 'open' => (
 	is  => 'ro',

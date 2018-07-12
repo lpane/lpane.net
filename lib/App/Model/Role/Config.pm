@@ -1,4 +1,4 @@
-package MostlyHarmless::Model::Role::Config;
+package App::Model::Role::Config;
 
 use Moose::Role;
 

@@ -1,19 +1,19 @@
-package MostlyHarmless::Model::Game;
+package App::Model::Game;
 
 use Moose;
 use Moose::Util::TypeConstraints;
 use namespace::autoclean;
 
-use MostlyHarmless::Model::Game::Media;
-use MostlyHarmless::Model::Game::Link;
+use App::Model::Game::Media;
+use App::Model::Game::Link;
 
-with 'MostlyHarmless::Model::Role::Config';
+with 'App::Model::Role::Config';
 
-subtype 'Media' => as class_type('MostlyHarmless::Model::Game::Media');
-coerce 'Media' => from 'HashRef' => via { MostlyHarmless::Model::Game::Media->new( %{ $_ } ) };
+subtype 'Media' => as class_type('App::Model::Game::Media');
+coerce 'Media' => from 'HashRef' => via { App::Model::Game::Media->new( %{ $_ } ) };
 
-subtype 'Link' => as class_type('MostlyHarmless::Model::Game::Link');
-coerce 'Link' => from 'HashRef' => via { MostlyHarmless::Model::Game::Link->new( %{ $_ } ) };
+subtype 'Link' => as class_type('App::Model::Game::Link');
+coerce 'Link' => from 'HashRef' => via { App::Model::Game::Link->new( %{ $_ } ) };
 
 has 'title' => (
 	is  => 'ro',

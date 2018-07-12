@@ -1,4 +1,4 @@
-package MostlyHarmless::Controller::Main;
+package App::Controller::Main;
 use Mojo::Base 'Mojolicious::Controller';
 
 sub index {

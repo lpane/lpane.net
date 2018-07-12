@@ -1,4 +1,4 @@
-package MostlyHarmless::Model::Game::Media;
+package App::Model::Game::Media;
 
 use Moose;
 use Moose::Util::TypeConstraints;

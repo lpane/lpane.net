@@ -1,5 +1,5 @@
-package MostlyHarmless::Register;
-use parent MostlyHarmless;
+package App::Register;
+use parent App;
 
 use strict;
 

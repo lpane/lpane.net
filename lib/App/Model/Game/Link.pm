@@ -1,4 +1,4 @@
-package MostlyHarmless::Model::Game::Link;
+package App::Model::Game::Link;
 
 use Moose;
 use namespace::autoclean;

@@ -1,9 +1,9 @@
-package MostlyHarmless::Model::Server;
+package App::Model::Server;
 
 use Moose;
 use namespace::autoclean;
 
-with 'MostlyHarmless::Model::Role::Redis';
+with 'App::Model::Role::Redis';
 
 use LWP::UserAgent;
 use JSON qw( decode_json encode_json );
