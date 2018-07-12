@@ -1,14 +1,14 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
-		<h1><span class='accent'>About</span> MH</h1>
+		<h1><span class='accent'>About</span> LPANE</h1>
 		<p class='text-muted'>The only thing worse than the consequences of all the soda you drank at your last LAN is attending a crummy one hosted by dispasionate people. Fear not, Mostly Harmless is here now.</p>
-		<h4>What Makes an MH LAN Different?</h4>
+		<h4>What Makes an LPANE LAN Different?</h4>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
 		</p>
 		<h4>Contact</h4>
-		<p>The name says it all - we're <i>mostly</i> harmless. If you have a question or comment please! - reach out, we'd love to hear it.</p>
+		<p>If you have a question or comment please! - reach out, we'd love to hear it.</p>
 		<p>
 			Contact us via email at: <a href='mailto:mhlan@gmail.com'>MHLan@gmail.com</a>
 		</p>

@@ -31,7 +31,7 @@
 			</nav>
 			<div class='top-bar'>
 				<div class='col-xs-12 no-padding top-bar-wrap'>
-					<p class='oswald strong col-sm-3'>MOSTLY HARMLESS</p>
+					<p class='oswald strong col-sm-3'>LPANE</p>
 					<div class='col-sm-6 ticker-container' id='event-banner'>
 						<div class='ticker-text'>
 							<!-- Put event info here in the banner-->

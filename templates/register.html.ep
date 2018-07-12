@@ -1,7 +1,7 @@
 %= include 'segments/top'
 	<section class='col-xs-12' id='unique'>
 
-		<h1><span class='accent'>Register</span> for MH LAN</h1>
+		<h1>LPANE <span class='accent'>Registration</span></h1>
 
 		% if( $available_seats > 0 ) {
 

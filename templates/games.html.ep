@@ -2,8 +2,8 @@
 
 <section class='col-xs-12' id='unique'>
 
-	<h1><span class='accent'>Games</span> MH Loves</h1>
-	<p class='text-muted'>When you attend a MH LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
+	<h1><span class='accent'>Games</span> LPANE Loves</h1>
+	<p class='text-muted'>When you attend an LPANE LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
 
 	% foreach my $game ( @{ $event->games } ) {
 		<div class='col-xs-12 col-md-6 game-description'>

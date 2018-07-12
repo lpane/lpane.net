@@ -5,7 +5,7 @@
 				<div class='footer-container no-padding'>
 					<div id='left'>
 						<img src='img/mh-typography.svg' class='img-responsive'>
-						<p style='font-weight: 300;'>Mostly Harmless organizes LAN parties across Massachusetts. All inquiries and comments can be directed to this@email.com</p>
+						<p style='font-weight: 300;'>LPANE organizes LAN parties across Massachusetts.</p>
 					</div>
 
 					<div id='right'>
@@ -14,7 +14,7 @@
 							<div>
 								<h3 class='oswald accent all-caps'>Can I Be Admin?</h3>
 								<hr>
-								<p class='thin'>Mostly Harmless Staff</p>
+								<p class='thin'>LPANE Staff</p>
 							</div>
 						</div>
 						<ul>
