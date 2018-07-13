@@ -4,24 +4,15 @@
 			<footer class='col-xs-12'>
 				<div class='footer-container no-padding'>
 					<div id='left'>
-						<img src='img/mh-typography.svg' class='img-responsive'>
-						<p style='font-weight: 300;'>LPANE organizes LAN parties across Massachusetts.</p>
+						<p style='font-weight: 300;'>LPANE organizes LAN parties across New England.</p>
 					</div>
 
 					<div id='right'>
 						<div id='top'>
-							<img src='/img/marvin-small.svg' class='img-responsive' alt='marvin'>
 							<div>
-								<h3 class='oswald accent all-caps'>Can I Be Admin?</h3>
-								<hr>
-								<p class='thin'>LPANE Staff</p>
+							    <img src='/img/lpane.png' class='img-responsive'>
 							</div>
 						</div>
-						<ul>
-							<li>Spacey</li>
-							<li>Spacey</li>
-							<li>Spacey</li>
-						</ul>
 					</div>
 				</div>
 			</footer>

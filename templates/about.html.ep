@@ -1,20 +1,22 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
+        <img src='img/noreaster-2009.jpg' class='img-responsive' alt='Some of us at the LPANE Nor'Easter LAN party in 2009.'>
 		<h1><span class='accent'>About</span> LPANE</h1>
-		<p class='text-muted'>The only thing worse than the consequences of all the soda you drank at your last LAN is attending a crummy one hosted by dispasionate people. Fear not, Mostly Harmless is here now.</p>
-		<h4>What Makes an LPANE LAN Different?</h4>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat ipsam doloribus itaque eius, qui repudiandae rem minus! Animi, itaque, possimus neque voluptatem voluptatum explicabo blanditiis quae deserunt praesentium repellendus eum!
-		</p>
-		<h4>Contact</h4>
-		<p>If you have a question or comment please! - reach out, we'd love to hear it.</p>
-		<p>
-			Contact us via email at: <a href='mailto:mhlan@gmail.com'>MHLan@gmail.com</a>
-		</p>
-		<p>
-			Join our Facebook group: <a href='https://www.facebook.com/groups/911387732254295/'>Mostly Harmless</a>
-		</p>
+		<p>The LAN Party Association of New England is a Boston area group of guys and gals who play games together, run servers, and organize LAN parties. Our goal is help host, promote, and provide resources and equipment to other LAN parties in New England.</p>
+
+		<h2>History</h2>
+
+		<p>LPANE was formed, <a href='https://web.archive.org/web/20040614194422/http://www.lpane.net:80/'>back in 2004</a>, by a group of 53 administrators from 14 New England LAN Parties whose goal was to unite in order to better their events and improve your LAN gaming experiences. LPANE supported great LAN parties such as <a href='http://www.lanchelms.com/'>LanChelms</a>, <a href='http://www.adrenalanrush.com/'>AdrenaLANrush</a>, the BadLANs, and many others.</p>
+        <p>In 2005 LPANE members worked together to throw the first <a href='https://web.archive.org/web/20050218091153/http://noreaster.lpane.net:80/'>Nor'Easter LAN party</a> with support for up to 500 people. The last Nor'Easter was in 2010 and after that LPANE went inactive.</p>
+
+        <h2>About Us</h2>
+        <p>We are a group of friends who grew up going to LPANE LANs together. Our goal is to revive the LPANE name and it's mission. Eventually we would like to bring back the Nor'Easter. We are starting off with small LANs right now.</p>
+
+		<h2>Contact</h2>
+        <p>If you are interested in hosting a LAN or lending a hand please contact us!</p>
+		<p><a href='mailto:lpane@gmail.com'>lpane@gmail.com</a></p>
+
 	</section>
 
 	%= include 'segments/announcements'

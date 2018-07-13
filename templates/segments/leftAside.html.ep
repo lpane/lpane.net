@@ -2,26 +2,11 @@
 <div class='col-sm-3 col-lg-2' id='leftAside'>
 	<nav role="navigation">
 		<ul class="nav nav-pills nav-stacked">
-				<a href='inxex' id='home-button'><img src='img/mh-typography.svg' class='img-responsive'></a>
+				<!-- <a href='inxex' id='home-button'><img src='img/mh-typography.svg' class='img-responsive'></a> -->
 			% foreach my $item ( @{ $sidebar } ) {
 				<a href="<%= $item->{href} %>"><%= $item->{name} %><span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
 			% }
     </ul>
   </nav>
 
-  <div id='connect' class='col-xs-12'>
-    <h3>Connect</h3>
-    <img src='img/twitter-icon.svg' class='img-responsive col-xs-4'>
-    <img src='img/steam-icon.svg' class='img-responsive col-xs-4'>
-    <img src='img/facebook-icon.svg' class='img-responsive col-xs-4'>
-    <br>
-    <p><strong class='col-xs-12'>Social Media</strong><br>Subscribe to our newsletter</p>
-  </div>
-
-  <div id='sponsors' class='col-xs-12'>
-    <h3>Sponsors</h3>
-    <img src='http://www.boostb2b.com/wp-content/uploads/2015/05/microcenter_logo_tcm23-152934.gif' class='img-responsive col-xs-12'>
-    <img src='http://dg6qn11ynnp6a.cloudfront.net/wp-content/uploads/2015/02/BAWLS_Guarana_Logo-blue.png' class='img-responsive col-xs-6'>
-    <img src='http://www.surge.com/files/uploads/surge-logo-light.png' class='img-responsive col-xs-6'>
-  </div>
 </div>
