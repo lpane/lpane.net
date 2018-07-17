@@ -8,13 +8,18 @@ sub startup {
 	my ($self) = @_;
 
 	$self->plugin('App::Plugin::Defaults');	# Default application settings
-	$self->plugin('App::Plugin::Servers');	# Game server classes
+	$self->plugin('App::Plugin::Registration');
+	$self->plugin('App::Plugin::Event');
+
+	#TODO no game servers anymore. I'll bring this back later.
+	#$self->plugin('App::Plugin::Servers');	# Game server classes
 
 	$self->hook( before_dispatch => sub {
-		my ($c) = @_;
+		my ($self) = @_;
 		# Read event config for every request
 		# TODO only instantiate this for requests under the main controller
-		$c->stash( event => App::Model::Event->new() );
+		$self->stash( event => $self->event );
+		$self->stash( registration => $self->registration );
 	});
 
 	my $r = $self->routes;
@@ -23,8 +28,12 @@ sub startup {
 	$r->route('/games')->to('main#games');
 	$r->route('/about')->to('main#about');
 
-	my $login = $r->any('/login')->to( controller => 'login' );
-	$login->get('/')->to( action => 'claim_identity' );
-	$login->get('/check')->to( action => 'check_identity' );
+	my $register = $r->any('/register')->to( controller => 'register' );
+	$register->get('/')->to( action => 'get' );
+
+	#TODO account login with OpenID
+	#my $login = $r->any('/login')->to( controller => 'login' );
+	#$login->get('/')->to( action => 'claim_identity' );
+	#$login->get('/check')->to( action => 'check_identity' );
 }
 1;

@@ -1,5 +1,5 @@
 -- To create the database execute
--- mysql mhlan -u mhlan < db.sql
+-- mysql lpane -u lpane < db.sql
 
 CREATE TABLE attendees (
 	user_id INT PRIMARY KEY AUTO_INCREMENT,

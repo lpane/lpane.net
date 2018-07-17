@@ -6,12 +6,9 @@
 		% if( $available_seats > 0 ) {
 
 		<hr>
-		<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. Fill out and submit the form below to begin the registration process.</p>
+		<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. The cost of admission is <span style='color: green; font-weight: 700;'>$<%= $event->price %></span> and payment is accepted via paypal.</p>
 
-		<!-- <p>Registration is currently open. The price of admission is $<%= $event->price %>. There are currently <b><%= $available_seats %></b> out of <%= $event->seats %> seats available.</p> -->
-
-
-		<!-- <form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
+		<form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
 
 			<div class="form-group form-group-lg">
 				<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
@@ -49,13 +46,14 @@
 				</div>
 			</div>
 
-		</form> -->
+		</form>
 
 		% } else {
 			<h2>There are no more available seats.</h2>
 		% }
 
 
+        <!--
 		<div id="steam-api-login">
 		  <header>
 		    <h3>Register via Steam</h3><img src="http://findicons.com/files/icons/770/token_dark/128/steam.png"/>
@@ -71,6 +69,7 @@
 		    <p>Learn more about the Steam Login API</p>
 		  </div>
 		</div>
+        -->
 	</section>
 	%= include 'segments/announcements'
 </div>
