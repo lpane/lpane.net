@@ -29,6 +29,7 @@ sub startup {
 	$r->route('/about')->to('main#about');
 
 	my $register = $r->any('/register')->to( controller => 'register' );
+	$register->post('/')->to( action => 'submit' );
 	$register->get('/')->to( action => 'get' );
 
 	#TODO account login with OpenID
