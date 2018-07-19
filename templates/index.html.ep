@@ -20,27 +20,61 @@
 
 		% if( $event->open ) {
 			<div class='col-sm-12'>
-				<h1>Directions</h1>
+                <h1><%= $event->title %></h1>
+                <p><%= $event->description %></p>
+                <div>
+                    <b>Start:</b> <%= $start %><br>
+                    <b>End:</b> <%= $end %><br>
+                </div>
+                <br>
+                <div>
+		            <p>Registration is currently <a href='/register'>open</a> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span>.<br>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
+                </div>
+            </div>
 
-				<br>
-
-				% foreach my $line ( @{ $event->address } ) {
-					<p><%= $line %></p>
-				% }
-
-				<br>
+            <div class='col-sm-12'>
+				<h2>Location</h2>
 
 				<p><%= $event->directions %></p>
-				<p><a href="<%= $event->map %>">Google maps.</a></p>
 				<br>
 
+                <div>
+				    % foreach my $line ( @{ $event->address } ) {
+				    	<%= $line %><br>
+				    % }
+                </div>
+                <br>
 				<iframe class="embed-responsive-item" src="<%= $event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			</div>
+
+            <
+
+            <div class='col-sm-12'>
+                <h2>Sleep</h2>
+                <p>This is a 24 hour LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be a few members of the LPANE staff awake all night to watch over your equipment.</p>
+            </div>
+
+            <div class='col-sm-12'>
+                <h2>Equipment</h2>
+                <p>There will be a chair, power strip, and an ethernet cable provided to you.</p>
+                <p>You will need to bring your own...</p>
+                <ul>
+                    <li>Monitor</li>
+                    <li>Monitor cable and power cord</li>
+                    <li>Computer</li>
+                    <li>Computer power cord</li>
+                    <li>Keyboard and mouse</li>
+                    <li>Mouse pad</li>
+                    <li>Headphones</li>
+                </ul>
+                <p>It's also not a bad idea to bring your own chair if you want to go through the trouble to be more comfortable.</p>
+            </div>
 		% }
 
 		<div class='col-sm-12'>
 			<h1>What's LPANE?</h1>
 			<p>LPANE, the LAN Party Association of New England, is a Boston area group of guys and gals who play games together, run servers, and organize LAN parties. Our goal is help host, promote, and provide resources and equipment to other LAN parties in New England.</p>
+            <br>
 		</div>
 
 	</section>

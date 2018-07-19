@@ -31,6 +31,7 @@ sub startup {
 	my $register = $r->any('/register')->to( controller => 'register' );
 	$register->post('/')->to( action => 'submit' );
 	$register->get('/')->to( action => 'get' );
+	$register->get('pay/:paypal_id')->to( action => 'pay' );
 
 	#TODO account login with OpenID
 	#my $login = $r->any('/login')->to( controller => 'login' );

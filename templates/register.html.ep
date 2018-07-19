@@ -3,42 +3,20 @@
 
 		<h1>LPANE <span class='accent'>Registration</span></h1>
 
-		% if( $available_seats > 0 ) {
+		% if( $seats > 0 ) {
 
 		<hr>
-		<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $available_seats %> remaining seats</span>. The cost of admission is <span style='color: green; font-weight: 700;'>$<%= $event->price %></span> and payment is accepted via paypal.</p>
+		<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span>.<br>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
 
 		<form novalidate="novalidate" class="form-horizontal" role="form" method="post" id='registration-form'>
 
-			<div class="form-group form-group-lg">
-				<label class="control-label col-sm-4 col-md-3" for="firstname">First Name:</label>
-				<div class="col-xs-12 col-sm-6">
-					<input type="text" class="form-control" name="firstname" placeholder="Gordon" value="<%= $fields->{firstname} %>">
-				</div>
+            %= include 'register/field', name => 'firstname', label => 'First Name', placeholder => 'Gordon', error => $error->{firstname}, value => $fields->{firstname}
 
-			</div>
+            %= include 'register/field', name => 'lastname', label => 'Last Name', placeholder => 'Freeman', error => $error->{lastname}, value => $fields->{lastname}
 
+            %= include 'register/field', name => 'email', label => 'Email', placeholder => 'gfree@blackmesa.net', error => $error->{email}, value => $fields->{email}
 
-			<div class="form-group form-group-lg">
-				<label class="control-label col-sm-4 col-md-3" for="lastname">Last Name:</label>
-				<div class="col-xs-12 col-sm-6">
-					<input type="text" class="form-control" name="lastname" placeholder="Freeman" value="<%= $fields->{lastname} %>">
-				</div>
-			</div>
-
-			<div class="form-group form-group-lg">
-				<label class="control-label col-sm-4 col-md-3" for="email">Email:</label>
-				<div class="col-xs-12 col-sm-6">
-					<input type="email" class="form-control has-error has-feedback" name="email" placeholder="gfree@blackmesa.net" value="<%= $fields->{email} %>">
-				</div>
-			</div>
-
-			<div class="form-group form-group-lg">
-				<label class="control-label col-sm-4 col-md-3" for="handle">Handle:</label>
-				<div class="col-xs-12 col-sm-6">
-					<input type="text" class="form-control" name="handle" placeholder="CrowBar" value="<%= $fields->{handle} %>">
-				</div>
-			</div>
+            %= include 'register/field', name => 'handle', label => 'Handle', placeholder => 'CrowBar', error => $error->{handle}, value => $fields->{handle}
 
 			<div class="form-group form-group-lg">
 				<div class="col-xs-8 col-sm-6 col-sm-offset-4 col-md-offset-3">

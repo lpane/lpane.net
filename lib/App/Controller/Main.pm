@@ -1,23 +1,30 @@
 package App::Controller::Main;
-use Mojo::Base 'Mojolicious::Controller';
 
-sub index {
-	my ($self) = @_;
+use Moo;
+use Method::Signatures;
 
-	$self->stash( title => 'Home' );
+extends 'Mojolicious::Controller';
+with 'App::Controller::Role::Seats';
+
+method index {
+
+    #TODO implement format_date
+	$self->stash(
+        title => 'Home',
+        start => 'Saturday, August 4th @ 12pm',
+        end => 'Sunday, August 5th @ 12pm',
+        seats => $self->seats
+    );
+
 	$self->render( template => 'index' );
 }
 
-sub games {
-	my ($self) = @_;
-
+method games {
 	$self->stash( title => 'Games' );
 	$self->render( template => 'games' );
 }
 
-sub about {
-	my ($self) = @_;
-
+method about {
 	$self->stash( title => 'About' );
 	$self->render( template => 'about' );
 }
