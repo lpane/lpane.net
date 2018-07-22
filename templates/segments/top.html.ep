@@ -25,6 +25,9 @@
 							% foreach my $item ( @{ $sidebar } ) {
 								<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
 							% }
+							% if( $event->open ) {
+								<li><a href="/attendees">Attendees</a></li>
+							% }
 			    		</ul>
 					</div>
 				</div>
