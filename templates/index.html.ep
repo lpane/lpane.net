@@ -3,7 +3,7 @@
 	<section class='col-xs-12' id='unique index'>
 
 		<!-- Text container -->
-		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center;'>
+		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center; z-index: 1;'>
 			<img src='img/logo.svg' class='img-responsive' id='logo-home'>
 			<div style='align-self: center'>
 				<h1><span class='accent'>Hola</span> LAN Lovers</h1>

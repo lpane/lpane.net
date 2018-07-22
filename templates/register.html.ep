@@ -6,7 +6,7 @@
 		% if( $seats > 0 ) {
 
 			<hr>
-			<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span> out of <%= $event->seats %>.<br>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
+			<p>Registration is currently <span style='color: green; font-weight: 700;'>open</span> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span> out of <%= $event->seats %>. Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
 
 			% if( $error_message ) {
 				<div>
