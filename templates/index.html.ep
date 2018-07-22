@@ -28,7 +28,8 @@
                 </div>
                 <br>
                 <div>
-		            <p>Registration is currently <a href='/register'>open</a> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span>.<br>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
+		            <h3>Registration is currently <a href='/register'>open</a> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span> out of <%= $event->seats %>.</h3>
+					<p>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
                 </div>
             </div>
 
@@ -36,8 +37,7 @@
 				<h2>Location</h2>
 
 				<p><%= $event->directions %></p>
-				<br>
-
+				<p><a href="<%= $event->website %>"><%= $event->website %></a></p>
                 <div>
 				    % foreach my $line ( @{ $event->address } ) {
 				    	<%= $line %><br>
@@ -47,11 +47,24 @@
 				<iframe class="embed-responsive-item" src="<%= $event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
 			</div>
 
-            <
+            <div class='col-sm-12'>
+                <h2>Games</h2>
+				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepaird</b> with the following games installed and ready to go.</p>
+				<ul>
+					<li><b>Unreal Tournament 2004</b> - A classic LAN party game. Instagib CTF and Death Match.</li>
+					<li><b>Counter-Strike: Global Offensive</b> - 5v5 custom match and Arms Race mode.</li>
+					<li><b>Overwatch</b> - We can do custom Match groups of 6v6 depending on the number of people playing.</li>
+					<li><b>Pirates, Vikings, and Knights II</b> - A free source mod, <a href="https://store.steampowered.com/app/17570/Pirates_Vikings_and_Knights_II/">download it here</a>.</li>
+					<li><b>Armagetron</b> - Free and open source, <a href="http://www.armagetronad.org/">download it here</a>.</li>
+					<li><b>The Hidden: Source</b> - A classic Half Life 2 source mod, <a href="http://www.hidden-source.com/">download it here</a>.</li>
+					<li><b>Half-Life 2: Death Match</b> - throw toilets at eachother.</li>
+				</ul>
+				<p>Feel free to bring your own games to share as well.</p>
+            </div>
 
             <div class='col-sm-12'>
                 <h2>Sleep</h2>
-                <p>This is a 24 hour LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be a few members of the LPANE staff awake all night to watch over your equipment.</p>
+                <p>This is a 24 hour LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be members of the <%= $event->title %> staff awake all night to watch over the equipment.</p>
             </div>
 
             <div class='col-sm-12'>

@@ -41,7 +41,9 @@
 				</div>
 			</div>
 			<div class='container'>
-				%= include 'segments/leftAside'
+				% if( $left ) {
+					%= include 'segments/leftAside'
+				% }
 
 				<!-- Begin specific page content -->
 				<div class='col-sm-8 col-lg-8 main-wrapper'>
