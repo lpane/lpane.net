@@ -48,6 +48,7 @@ method startup {
 	$r->route('/')->to('main#index');
 	$r->route('/games')->to('main#games');
 	$r->route('/about')->to('main#about');
+	$r->route('/attendees')->to('main#attendees');
 
 	my $register = $r->any('/register')->to( controller => 'register' );
 	$register->post('/')->to( action => 'submit' );

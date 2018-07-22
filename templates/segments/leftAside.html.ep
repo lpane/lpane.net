@@ -6,6 +6,9 @@
 			% foreach my $item ( @{ $sidebar } ) {
 				<a href="<%= $item->{href} %>"><%= $item->{name} %><span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
 			% }
+			% if( $event->open ) {
+				<a href="/attendees">Attendees<span class="glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
+			% }
     </ul>
   </nav>
 

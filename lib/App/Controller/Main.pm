@@ -29,4 +29,9 @@ method about {
 	$self->render( template => 'about' );
 }
 
+method attendees {
+	$self->stash( title => 'Attendees' );
+	$self->render( template => 'attendees' );
+}
+
 1;

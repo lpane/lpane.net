@@ -1,15 +1,22 @@
 %= include 'segments/top'
 
-<table class="table">
-%	my $i=1;
-%	foreach my $attendee ( @{ $attendees } ) {
+<section class='col-xs-12' id='unique'>
+
+	<h1><%= $event->title %> <span class='accent'>Attendees</span></h1>
+<ul>
+%	foreach my $attendee ( @{ $registration->attendee } ) {
 %		if( $attendee->{payment_status} ) {
-	<tr>
-		<td><%= $i++ %></td>
-		<td><%= $attendee->{handle} %></td>
-	</tr>
+			<li><h2><%= $attendee->{handle} %></h2></li>
 %		}
 %	}
-</table>
+</ul>
+
+</section>
+
+%= include 'segments/announcements'
+
+</div>
+
+%= include 'segments/rightAside'
 
 %= include 'segments/bottom'
