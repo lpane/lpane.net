@@ -46,11 +46,11 @@ method create( $params ) {
 	$sth = $self->{dbh}->prepare("INSERT INTO attendees(email, firstname, lastname, handle, paypal_id) VALUES (?,?,?,?,?)");
 	$sth->execute( $params->{email}, $params->{firstname}, $params->{lastname}, $params->{handle}, $paypal_id );
 
-	return $paypal_id;
+	return $self->attendee( paypal_id => $paypal_id );
 
 }
 
-method status( :$email, :$paypal_id ) {
+method attendee( :$email, :$paypal_id ) {
     my $sth;
     my $query = "SELECT a.user_id, a.email, a.firstname, a.lastname, a.handle, a.paypal_id, IFNULL(p.user_id, 0) AS payment_status FROM attendees a LEFT JOIN paid p ON a.user_id=p.user_id";
 
@@ -77,5 +77,22 @@ method status( :$email, :$paypal_id ) {
 
         return \@attendees;
     }
+}
+
+# Mark the attendee as paid given a paypal_id
+method set_paid( :$paypal_id ) {
+	my $sth;
+
+	# Get user ID associated with the paypal ID from unpaid table
+	$sth = $self->{dbh}->prepare("SELECT user_id FROM attendees WHERE paypal_id=?");
+	$sth->execute( $paypal_id );
+
+	my ($user_id) = $sth->fetchrow_array();
+
+	# Insert user_id in to paid table
+	$sth = $self->{dbh}->prepare("INSERT INTO paid(user_id) VALUES (?)");
+	$sth->execute( $user_id );
+
+	return;
 }
 1;

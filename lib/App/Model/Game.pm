@@ -7,7 +7,7 @@ use namespace::autoclean;
 use App::Model::Game::Media;
 use App::Model::Game::Link;
 
-with 'App::Model::Role::Config';
+with 'App::Role::Config';
 
 subtype 'Media' => as class_type('App::Model::Game::Media');
 coerce 'Media' => from 'HashRef' => via { App::Model::Game::Media->new( %{ $_ } ) };

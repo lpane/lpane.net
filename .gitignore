@@ -1,4 +1,5 @@
 config/event.json
+config/app.json
 *.swp
 *.swo
 *.pid

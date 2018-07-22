@@ -9,7 +9,7 @@ use App::Model::Game;
 use Mojo::Date;
 use DateTime;
 
-with 'App::Model::Role::Config';
+with 'App::Role::Config';
 
 subtype 'ArrayOfGames' => as 'ArrayRef[App::Model::Game]';
 coerce 'ArrayOfGames' => from 'ArrayRef[Str]' => via { [ map { App::Model::Game->new($_) } @$_ ] };
@@ -38,6 +38,11 @@ has 'paypal_email' => (
 has 'address' => (
 	is  => 'ro',
 	isa => 'ArrayRef[Str]'
+);
+
+has 'website' => (
+	is => 'ro',
+	isa => 'Str'
 );
 
 has 'directions' => (

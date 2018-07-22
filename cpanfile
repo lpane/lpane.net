@@ -1,5 +1,5 @@
 requires 'Mojolicious';
-requires 'JSON';
+requires 'Mojolicious::Plugin::PayPal';
 requires 'JSON::Validator';
 requires 'Moose'; # Eventually plan to convert everything over to Moo
 requires 'Moo';

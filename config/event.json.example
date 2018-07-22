@@ -1,17 +1,22 @@
 {
-	"header": "TEST LAN August 1 @12pm - August 2 @12pm // Chester Mossman Teen Center // Lunenburg, MA // $20 Entry",
-	"reg_open_date": "2016-05-07 00:00:00",
-	"reg_close_date": "2016-08-30 23:59:59",
-	"seats": 30,
+  "title": "WalthLAN",
+	"header": "WalthLAN // August 4 12pm - August 5 12pm // Game Underground // Waltham, MA // $20 Registration",
+	"reg_open_date": "2018-07-01 00:00:00",
+	"reg_close_date": "2018-08-04 23:59:59",
+  "start_date": "2018-08-04 12:00:00",
+  "end_date": "2018-08-05 12:00:00",
+	"seats": 20,
 	"price": 20.00,
-	"paypal_email": "packard.brian@gmail.com",
+	"paypal_email": "chris.handwerker@gmail.com",
 	"address": [
-		"Chester Mossman Teen Center",
-		"15 Memorial Drive",
-		"Lunenburg, MA"
+		"Game Underground",
+		"349 Moody St",
+		"Waltham, MA 02453"
 	],
-	"directions": "The Teen Center is located between Lunenburg Town hall and Lunenburg Public Library. Memorial Drive runs parallel to Massachusetts Ave (route 2A) and perpendicular to Main St.",
-	"map": "https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d46993.35470866293!2d-71.75846205234113!3d42.5959470748843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x89e3e84836bbce91%3A0xb20bf9597d662097!2sChester+Mossman+Teen+Center%2C+15+Memorial+Dr%2C+Lunenburg%2C+MA+01462!3m2!1d42.5959522!2d-71.7241293!5e0!3m2!1sen!2sus!4v1437803043340",
+  "website": "https://www.game-underground.com/",
+  "description": "The first ever WalthLAN party will be hosted at Game Underground in Waltham, MA. We hope this will be the first of many LAN parties hosted under the LPANE name.",
+	"directions": "Game Underground is located on the corner of Spruce St and Moody St in Waltham, MA. You can find pretty cheap municipal parking on the side streets behind the bulding. You could probably also find a spot to park for free.",
+	"map": "https://www.google.com/maps/embed/v1/place?key=AIzaSyDzMza1KatagRgdqgiHM0yAT_qXi-H1h48&q=Game+Underground,+Moody+Street,+Waltham,+MA,+USA",
 	"games": [
 		"dirty_bomb",
 		"tf2"

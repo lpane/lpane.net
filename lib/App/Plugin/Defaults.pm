@@ -12,8 +12,11 @@ sub register {
 			{ name => "About", href => "/about" }
 		],
 		error   => {},
+		error_message => undef,
+		success_message => undef,
 		fields  => {},
 		header  => 1,
+		left    => 1,
 		autosubmit => 0
 	});
 }
