@@ -4,7 +4,7 @@
 
 		<!-- Text container -->
 		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center;'>
-			<img src='img/lpane.png' class='img-responsive' id='marvin-home'>
+			<img src='img/logo.svg' class='img-responsive' id='logo-home'>
 			<div style='align-self: center'>
 				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
 
