@@ -9,7 +9,7 @@
 				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
 
 				% if( $event->open ) {
-					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration open!</h3>
+					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration is <a href='/register'>open</a> with <%= $seats %> seats left.</h3>
 				% } else {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
 				% }
@@ -17,7 +17,6 @@
 			</div>
 			<hr>
 		</div>
-
 		% if( $event->open ) {
 			<div class='col-sm-12'>
                 <h1><%= $event->title %></h1>
@@ -27,10 +26,6 @@
                     <b>End:</b> <%= $end %><br>
                 </div>
                 <br>
-                <div>
-		            <h3>Registration is currently <a href='/register'>open</a> with <span style='color: green; font-weight: 700;'><%= $seats %> remaining seats</span> out of <%= $event->seats %>.</h3>
-					<p>Registration costs <b>$<%= $event->price %></span></b> and payment is accepted via paypal.</p>
-                </div>
             </div>
 
             <div class='col-sm-12'>
