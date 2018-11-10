@@ -9,7 +9,12 @@
 				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
 
 				% if( $event->open ) {
-					<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration is <a href='/register'>open</a> with <%= $seats %> seats left.</h3>
+					% if( $seats > 0 ) {
+						<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration is <a href='/register'>open</a> with <%= $seats %> seats left.</h3>
+					% } else {
+						<h3 style='font-weight: 300; margin-bottom: 15px;'>There are no more seats left :(</h3>
+						<p>Join our <a href='https://discord.gg/n6SgyVn'>discord</a> and stay tuned for the next LAN party.</p>
+					% }
 				% } else {
 					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
 				% }
@@ -21,6 +26,7 @@
 			<div class='col-sm-12'>
                 <h1><%= $event->title %></h1>
                 <p><%= $event->description %></p>
+				<p>Game Underground is in a fantastic spot on Moody Street a few doors down from Lizzy's Ice Cream. Just outside the door you'll find bars, restrautnts, quick places to eat.</p>
                 <div>
                     <b>Start:</b> <%= $start %><br>
                     <b>End:</b> <%= $end %><br>
@@ -44,14 +50,14 @@
 
             <div class='col-sm-12'>
                 <h2>Games</h2>
-				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepaird</b> with the following games installed and ready to go.</p>
+				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepared</b> with the following games installed and ready to go.</p>
 				<ul>
-					<li><b>Unreal Tournament 2004</b> - A classic LAN party game. Instagib CTF and Death Match.</li>
+					<li><b>Unreal Tournament (2k4 and GOTY)</b> - Classic LAN party games. Instagib CTF and Death Match. We have copies of these if you don't have them. They are also available on steam.</li>
 					<li><b>Counter-Strike: Global Offensive</b> - 5v5 custom match and Arms Race mode.</li>
 					<li><b>Overwatch</b> - We can do custom Match groups of 6v6 depending on the number of people playing.</li>
 					<li><b>Pirates, Vikings, and Knights II</b> - A free source mod, <a href="https://store.steampowered.com/app/17570/Pirates_Vikings_and_Knights_II/">download it here</a>.</li>
 					<li><b>Armagetron</b> - Free and open source, <a href="http://www.armagetronad.org/">download it here</a>.</li>
-					<li><b>The Hidden: Source</b> - A classic Half Life 2 source mod, <a href="http://www.hidden-source.com/">download it here</a>.</li>
+					<li><b>The Hidden: Source</b> - A classic Half Life 2 source mod, <a href="https://www.moddb.com/mods/hidden-source/downloads/hidden-source-beta-4b">download it here</a>.</li>
 					<li><b>Half-Life 2: Death Match</b> - throw toilets at eachother.</li>
 				</ul>
 				<p>Feel free to bring your own games to share as well.</p>
@@ -59,7 +65,7 @@
 
             <div class='col-sm-12'>
                 <h2>Sleep</h2>
-                <p>This is a 24 hour LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be members of the <%= $event->title %> staff awake all night to watch over the equipment.</p>
+                <p>This is an overnight LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be members of the <%= $event->title %> staff awake all night to watch over the equipment.</p>
             </div>
 
             <div class='col-sm-12'>
@@ -68,11 +74,11 @@
                 <p>You will need to bring your own...</p>
                 <ul>
                     <li>Monitor</li>
-                    <li>Monitor cable and power cord</li>
+                    <li>Monitor Cable and Power Cord</li>
                     <li>Computer</li>
-                    <li>Computer power cord</li>
-                    <li>Keyboard and mouse</li>
-                    <li>Mouse pad</li>
+                    <li>Computer Power Cord</li>
+                    <li>Keyboard and Mouse</li>
+                    <li>Mouse Pad</li>
                     <li>Headphones</li>
                 </ul>
                 <p>It's also not a bad idea to bring your own chair if you want to go through the trouble to be more comfortable.</p>
