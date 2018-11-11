@@ -4,6 +4,6 @@ use Moo::Role;
 use Method::Signatures;
 
 method seats {
-	return $self->event->open ? $self->event->seats - $self->registration->seats : undef;
+	return $self->event->open ? $self->event->seats - $self->registration->seats : 0;
 }
 1;
