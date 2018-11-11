@@ -10,11 +10,14 @@
 			<li><b>Counter-Strike: Global Offensive</b> - 5v5 custom match and Arms Race mode.</li>
 			<li><b>Overwatch</b> - We can do custom Match groups of 6v6 depending on the number of people playing.</li>
 			<li><b>Pirates, Vikings, and Knights II</b> - A free source mod, <a href="https://store.steampowered.com/app/17570/Pirates_Vikings_and_Knights_II/">download it here</a>.</li>
+			<li><b>Fistful of Frags</b> - A free source mod, <a href="https://store.steampowered.com/app/265630/Fistful_of_Frags/">download it here</a>.</li>
 			<li><b>Armagetron</b> - Free and open source, <a href="http://www.armagetronad.org/">download it here</a>.</li>
-			<li><b>The Hidden: Source</b> - A classic Half Life 2 source mod, <a href="https://www.moddb.com/mods/hidden-source/downloads/hidden-source-beta-4b">download it here</a>.</li>
+			<li><b>Rocket League</b> - On steam, <a href="https://store.steampowered.com/app/252950/Rocket_League/">download it here.</a><li>
+			<li><b>Dirty Bomb</b> - An intense Free-to-Play competitive shooter from Splash Damage, creators of Wolfenstein: Enemy Territory. <a href="https://www.dirtybomb.com/">Download it here.</a></li>
 			<li><b>Half-Life 2: Death Match</b> - throw toilets at eachother.</li>
 		</ul>
-		<p>Feel free to bring your own games to share as well.</p>
+		<br>
+		<p>Also looking for suggestions. If you have any let us know in <a href=https://lpane.net/discord>Discord.</a></p>
 	% } else {
 		<h1><span class='accent'>Games</span> LPANE Loves</h1>
 		<p class='text-muted'>When you attend an LPANE LAN, it's likely that you'll play at least some of the following games. Here are some of our favorites. Have a game you feel like we should play? <a href='#'>Let us know!</a></p>
@@ -24,7 +27,7 @@
 			<li><b>Overwatch</b> - We can do custom Match groups of 6v6 depending on the number of people playing.</li>
 			<li><b>Pirates, Vikings, and Knights II</b> - A free source mod, <a href="https://store.steampowered.com/app/17570/Pirates_Vikings_and_Knights_II/">download it here</a>.</li>
 			<li><b>Armagetron</b> - Free and open source, <a href="http://www.armagetronad.org/">download it here</a>.</li>
-			<li><b>The Hidden: Source</b> - A classic Half Life 2 source mod, <a href="https://www.moddb.com/mods/hidden-source/downloads/hidden-source-beta-4b">download it here</a>.</li>
+			<li><b>Rocket League</b> - On steam, <a href="https://store.steampowered.com/app/252950/Rocket_League/">download it here.</a><li>
 			<li><b>Half-Life 2: Death Match</b> - throw toilets at eachother.</li>
 		</ul>
 		% foreach my $game ( @{ $event->games } ) {

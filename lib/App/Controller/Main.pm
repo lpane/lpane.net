@@ -9,10 +9,11 @@ with 'App::Controller::Role::Seats';
 method index {
 
     #TODO implement format_date
+	# https://metacpan.org/pod/DateTime#Formatters-And-Stringification
 	$self->stash(
         title => 'Home',
-        start => 'Saturday, August 4th @ 12pm',
-        end => 'Sunday, August 5th @ 12pm',
+        start => 'Saturday, January 12th @ 12pm',
+        end => 'Sunday, January 13th @ 12pm',
         seats => $self->seats
     );
 
