@@ -1,0 +1,12 @@
+{
+	"title": "Age of Empires II",
+	"description": "An RTS where you command one of 23 civilizations, each with unique attributes, buildings, and technologies, as well as unique combat units.",
+	"media": {
+		"type": "youtube",
+		"src": "https://youtube.com/embed/sPNaWwKbElA?start=170"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/221380/Age_of_Empires_II_HD/"
+	}
+}

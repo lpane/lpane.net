@@ -1,0 +1,14 @@
+{
+	"title": "Half-Life 2: Death Match",
+	"type": "FPS Deathmatch",
+	"price": "$5",
+	"description": "Classic team deathmatch based on Half-Life 2. Pick up a gun and shoot or use your grav gun and throw toilets.",
+	"media": {
+		"type": "youtube",
+		"src": "https://youtube.com/embed/G0TRdd_1gt8?start=58"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/320/HalfLife_2_Deathmatch/"
+	}
+}

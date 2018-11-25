@@ -21,18 +21,6 @@ has 'title' => (
 	required => 1
 );
 
-has 'type' => (
-	is  => 'ro',
-	isa => 'Str',
-	required => 1
-);
-
-has 'price' => (
-	is  => 'ro',
-	isa => 'Str',
-	default => 'Free'
-);
-
 has 'description' => (
 	is  => 'ro',
 	isa => 'Str',

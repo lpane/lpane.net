@@ -53,18 +53,11 @@
 				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepared</b> with the following games installed and ready to go.</p>
 
 				<ul>
-					<li><b>Unreal Tournament (2k4 and GOTY)</b> - Classic LAN party games. Instagib CTF and Death Match. We have copies of these if you don't have them. They are also available on steam.</li>
-					<li><b>Counter-Strike: Global Offensive</b> - 5v5 custom match and Arms Race mode.</li>
-					<li><b>Overwatch</b> - We can do custom Match groups of 6v6 depending on the number of people playing.</li>
-					<li><b>Pirates, Vikings, and Knights II</b> - A free source mod, <a href="https://store.steampowered.com/app/17570/Pirates_Vikings_and_Knights_II/">download it here</a>.</li>
-					<li><b>Fistful of Frags</b> - A free source mod, <a href="https://store.steampowered.com/app/265630/Fistful_of_Frags/">download it here</a>.</li>
-					<li><b>Armagetron</b> - Free and open source, <a href="http://www.armagetronad.org/">download it here</a>.</li>
-					<li><b>Rocket League</b> - On steam, <a href="https://store.steampowered.com/app/252950/Rocket_League/">download it here.</a><li>
-							<li><b>Dirty Bomb</b> - An intense Free-to-Play competitive shooter from Splash Damage, creators of Wolfenstein: Enemy Territory. <a href="https://www.dirtybomb.com/">Download it here.</a></li>
-					<li><b>Half-Life 2: Death Match</b> - throw toilets at eachother.</li>
+				% foreach my $game ( @{ $event->games } ) {
+				<li><b><a href="<%= $game->link->href %>"><%= $game->title %></a></b> <%= $game->description %></li>
+				% }
 				</ul>
 				<p>Feel free to bring your own games to share as well.</p>
-				<p>Also looking for suggestions. If you have any let us know in <a href=https://lpane.net/discord>Discord.</a></p>
             </div>
 
             <div class='col-sm-12'>

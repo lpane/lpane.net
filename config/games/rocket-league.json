@@ -1,0 +1,12 @@
+{
+	"title": "Rocket League",
+	"description": "Rocket League is a soccer game with rocket-powered cars. Players have the ability to jump and hit the ball mid-air, or dodge an attempt at demolition.",
+	"media": {
+		"type": "youtube",
+		"src": "https://youtube.com/embed/LIyXvq5ypuc?start=277"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/252950/Rocket_League/"
+	}
+}

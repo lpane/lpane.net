@@ -1,0 +1,14 @@
+{
+	"title": "Armagetron",
+	"type": "Tron Light Cycle Game",
+	"price": "Free",
+	"description": "A Tron style multiplayer light cycle game. Work with your team to box in other players. Last team standing wins.",
+	"media": {
+		"type": "youtube",
+		"src": "https://www.youtube.com/embed/9rYk3056JTs?start=30"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "http://www.armagetronad.org/downloads.php"
+	}
+}
