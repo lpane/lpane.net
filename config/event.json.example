@@ -1,0 +1,24 @@
+{
+  "title": "WalthLAN",
+	"header": "WalthLAN // August 4 12pm - August 5 12pm // Game Underground // Waltham, MA // $20 Registration",
+	"reg_open_date": "2018-07-01 00:00:00",
+	"reg_close_date": "2018-08-04 23:59:59",
+  "start_date": "2018-08-04 12:00:00",
+  "end_date": "2018-08-05 12:00:00",
+	"seats": 20,
+	"price": 20.00,
+	"paypal_email": "chris.handwerker@gmail.com",
+	"address": [
+		"Game Underground",
+		"349 Moody St",
+		"Waltham, MA 02453"
+	],
+  "website": "https://www.game-underground.com/",
+  "description": "The first ever WalthLAN party will be hosted at Game Underground in Waltham, MA. We hope this will be the first of many LAN parties hosted under the LPANE name.",
+	"directions": "Game Underground is located on the corner of Spruce St and Moody St in Waltham, MA. You can find pretty cheap municipal parking on the side streets behind the bulding. You could probably also find a spot to park for free.",
+	"map": "https://www.google.com/maps/embed/v1/place?key=AIzaSyDzMza1KatagRgdqgiHM0yAT_qXi-H1h48&q=Game+Underground,+Moody+Street,+Waltham,+MA,+USA",
+	"games": [
+		"dirty_bomb",
+		"tf2"
+	]
+}

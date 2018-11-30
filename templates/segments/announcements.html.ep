@@ -1,0 +1,11 @@
+<section id='announcement-wrapper' class='col-xs-12 clearfix'>
+  <h3>Announcements</h3>
+
+  <div class='announcement'>
+    <strong>July, 2018 - Discord Server</strong>
+    <p class='text-muted'>Join our <a href="https://discord.gg/n6SgyVn">Discord</a> for games or to talk about the next LAN party.</p>
+  </div>
+
+  <hr>
+
+</section>

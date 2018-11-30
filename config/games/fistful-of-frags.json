@@ -1,0 +1,14 @@
+{
+	"title": "Fistful of Frags",
+	"type": "FPS Team Deathmatch",
+	"price": "Free",
+	"description": "An action packed first person source mod set in the Wild West times. A unique combination of non stop action and slow but powerful weaponry. Fistful of Frags is a bit slower paced than the usual gungame.",
+	"media": {
+		"type": "youtube",
+		"src": "https://youtube.com/embed/_FRCyuw3bLA"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/265630/Fistful_of_Frags/"
+	}
+}

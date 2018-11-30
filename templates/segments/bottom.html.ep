@@ -1,5 +1,22 @@
-			</div>
-			<!-- /content -->
-		</div>
+			</div> <!-- /.main-wrapper -->
+		</div><!-- /.container -->
+		<div class='container-fluid'>
+			<footer class='col-xs-12'>
+				<div class='footer-container no-padding'>
+					<div id='left'>
+						<p style='font-weight: 300;'>LPANE organizes LAN parties across New England.</p>
+					</div>
+
+					<div id='right'>
+						<div id='top'>
+							<div>
+							    <img src='/img/logo.svg' class='img-responsive'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div> <!-- /.container-fluid -->
+		<script src="/js/scripts.js"></script>
 	</body>
 </html>

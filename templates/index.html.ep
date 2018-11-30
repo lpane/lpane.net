@@ -1,7 +1,99 @@
 %= include 'segments/top'
 
-<div class="banner">
-	<img class="banner" src="img/mhl-logo.svg">
+	<section class='col-xs-12' id='unique index'>
+
+		<!-- Text container -->
+		<div class='col-xs-12' style='display:flex; flex-wrap:wrap; justify-content: center; z-index: 1;'>
+			<img src='img/logo.svg' class='img-responsive' id='logo-home'>
+			<div style='align-self: center'>
+				<h1><span class='accent'>Hola</span> LAN Lovers</h1>
+
+				% if( $event->open ) {
+					% if( $seats > 0 ) {
+						<h3 style='font-weight: 300; margin-bottom: 15px;'>Registration is <a href='/register'>open</a> with <%= $seats %> seats left.</h3>
+					% } else {
+						<h3 style='font-weight: 300; margin-bottom: 15px;'>There are no more seats left :(</h3>
+						<p>Join our <a href='https://discord.gg/n6SgyVn'>discord</a> and stay tuned for the next LAN party.</p>
+					% }
+				% } else {
+					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
+				% }
+
+			</div>
+			<hr>
+		</div>
+		% if( $event->open ) {
+			<div class='col-sm-12'>
+                <h1><%= $event->title %></h1>
+                <p><%= $event->description %></p>
+				<p>Game Underground is in a fantastic spot on Moody Street a few doors down from Lizzy's Ice Cream. Just outside the door you'll find bars, restrautnts, quick places to eat.</p>
+                <div>
+                    <b>Start:</b> <%= $start %><br>
+                    <b>End:</b> <%= $end %><br>
+                </div>
+                <br>
+            </div>
+
+            <div class='col-sm-12'>
+				<h2>Location</h2>
+
+				<p><%= $event->directions %></p>
+				<p><a href="<%= $event->website %>"><%= $event->website %></a></p>
+                <div>
+				    % foreach my $line ( @{ $event->address } ) {
+				    	<%= $line %><br>
+				    % }
+                </div>
+                <br>
+				<iframe class="embed-responsive-item" src="<%= $event->map %>" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+			</div>
+
+            <div class='col-sm-12'>
+                <h2>Games</h2>
+				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepared</b> with the following games installed and ready to go.</p>
+
+				<ul>
+				% foreach my $game ( @{ $event->games } ) {
+				<li><b><a href="<%= $game->link->href %>"><%= $game->title %></a></b> <%= $game->description %></li>
+				% }
+				</ul>
+				<p>Feel free to bring your own games to share as well.</p>
+            </div>
+
+            <div class='col-sm-12'>
+                <h2>Sleep</h2>
+                <p>This is an overnight LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be members of the <%= $event->title %> staff awake all night to watch over the equipment.</p>
+            </div>
+
+            <div class='col-sm-12'>
+                <h2>Equipment</h2>
+                <p>There will be a chair, power strip, and an ethernet cable provided to you.</p>
+                <p>You will need to bring your own...</p>
+                <ul>
+                    <li>Monitor</li>
+                    <li>Monitor Cable and Power Cord</li>
+                    <li>Computer</li>
+                    <li>Computer Power Cord</li>
+                    <li>Keyboard and Mouse</li>
+                    <li>Mouse Pad</li>
+                    <li>Headphones</li>
+                </ul>
+                <p>It's also not a bad idea to bring your own chair if you want to go through the trouble to be more comfortable.</p>
+            </div>
+		% }
+
+		<div class='col-sm-12'>
+			<h1>What's LPANE?</h1>
+			<p>LPANE, the LAN Party Association of New England, is a Boston area group of guys and gals who play games together, run servers, and organize LAN parties. Our goal is help host, promote, and provide resources and equipment to other LAN parties in New England.</p>
+            <br>
+		</div>
+
+	</section>
+
+	%= include 'segments/announcements'
+
 </div>
+
+%= include 'segments/rightAside'
 
 %= include 'segments/bottom'

@@ -1,0 +1,21 @@
+<!-- Updates, Community, Blog -->
+<section id='rightAside' class=' col-xs-12 col-sm-3 col-md-8 col-lg-2 col-lg-offset-0'>
+
+    <div class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+        <h3>Community</h3>
+        <strong>Join Us</strong>
+        <p class='text-muted'>Why wait until the next LAN? Join us on <a href="https://discord.gg/n6SgyVn">Discord</a>.</p>
+    </div>
+
+	<!--
+    <div class='col-xs-12 col-sm-12 col-md-4 col-lg-12'>
+        <h3>Connect</h3>
+        <p class='text-muted'>Follow us on social media to stay in the loop about future New England LAN parties.</p>
+        <img src='img/twitter-icon.svg' class='img-responsive col-xs-4'>
+        <img src='img/steam-icon.svg' class='img-responsive col-xs-4'>
+        <img src='img/facebook-icon.svg' class='img-responsive col-xs-4'>
+        <br>
+    </div>
+	-->
+
+</section>

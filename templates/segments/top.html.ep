@@ -4,18 +4,49 @@
 		%= include 'segments/head'
 	</head>
 	<body>
-		<div id="wrapper">
-			<!-- sidebar -->
-			<div id="sidebar-wrapper">
-				<ul class="sidebar-nav">
-				% foreach my $item ( @{ $sidebar } ) {
-					<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
-				% }
-				</ul>
-				<div id="menu-toggle"><p><i class="glyphicon glyphicon-chevron-right"></i></p></div>
-			</div>
-			<!-- /sidebar -->
+		<div class="container-fluid" id="page-wrap">
+			<!-- MOBILE NAV -->
+			<nav class="navbar navbar-default navbar-fixed-top" id="mobile-nav">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+						  <span class="icon-bar first-bar"></span>
+						  <span class="icon-bar middle-bar"></span>
+						  <span class="icon-bar bottom-bar"></span>
+			      </button>
+			      <a class="navbar-brand oswald" href="#">LPANE</a>
+			    </div>
 
-			<!-- content -->
-			<div id="page-content-wrapper">
-				<p class="header"><%= $settings->{header} if $header %></p>
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+ 	 		    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    		<ul class="nav navbar-nav">
+							% foreach my $item ( @{ $sidebar } ) {
+								<li><a href="<%= $item->{href} %>"><%= $item->{name} %></a></li>
+							% }
+							% if( $event->open ) {
+								<li><a href="/attendees">Attendees</a></li>
+							% }
+			    		</ul>
+					</div>
+				</div>
+			</nav>
+			<div class='top-bar'>
+				<div class='col-xs-12 no-padding top-bar-wrap'>
+					<p class='oswald strong col-sm-3'>LPANE</p>
+					<div class='col-sm-6 ticker-container' id='event-banner'>
+						<div class='ticker-text'>
+							<!-- Put event info here in the banner-->
+							<p><%= $event->header %></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class='container'>
+				% if( $left ) {
+					%= include 'segments/leftAside'
+				% }
+
+				<!-- Begin specific page content -->
+				<div class='col-sm-8 col-lg-8 main-wrapper'>

@@ -1,0 +1,14 @@
+{
+	"title": "Unreal Tournament 2004",
+	"type": "FPS, Team, Deathmatch, InstaGib, Vehicles",
+  "price": "$15",
+	"description": "Classic LAN party tournament FPS with lots of game modes. We play Capture the Flag, Death Match, and Onslaught (a control point map with vehicles).",
+	"media": {
+		"type": "youtube",
+		"src": "https://www.youtube.com/embed/ZDiJ1_AmRsQ?start=65"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/13230/Unreal_Tournament_2004_Editors_Choice_Edition/"
+	}
+}

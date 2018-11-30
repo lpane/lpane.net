@@ -1,0 +1,14 @@
+{
+	"title": "Counter-Strike: Global Offensive",
+	"type": "Tactical FPS",
+	"price": "$15",
+	"description": "A LAN party classic turned e-sport. We'll be playing Arms Race, aka Gun Game, and classic CT v.s. T demolition game modes.",
+	"media": {
+		"type": "youtube",
+		"src": "https://youtube.com/embed/p5VD49suIUw?start=210"
+	},
+	"link": {
+		"name": "Get it on Steam",
+		"href": "https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/"
+	}
+}

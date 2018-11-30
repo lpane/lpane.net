@@ -1,0 +1,12 @@
+<strong><%= $server->title %></strong>
+<div id='server-players-container'>
+	<ul>
+	% if( my @players = $server->players ) {
+		% 	foreach my $player ( @players ) {
+				<li><%= link_to $player->{character_name} => "http://steamcommunity.com/profiles/$player->{steam_id}" %></li>
+		% 	}
+	% } else {
+		<li class='no-players'>No players connected</li>
+	% }
+	</ul>
+</div>
