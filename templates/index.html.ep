@@ -26,7 +26,7 @@
 			<div class='col-sm-12'>
                 <h1><%= $event->title %></h1>
                 <p><%= $event->description %></p>
-				<p>Game Underground is in a fantastic spot on Moody Street a few doors down from Lizzy's Ice Cream. Just outside the door you'll find bars, restrautnts, quick places to eat.</p>
+				<p>Game Underground is in a fantastic spot on Moody Street a few doors down from Lizzy's Ice Cream. Just outside the door you'll find bars, restaurants, and quick places to eat.</p>
                 <div>
                     <b>Start:</b> <%= $start %><br>
                     <b>End:</b> <%= $end %><br>
