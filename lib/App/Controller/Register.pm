@@ -100,7 +100,7 @@ method confirm {
 
 			if( $res->code == 200 ) {
 				$self->registration->set_paid( paypal_id => $self->session('paypal_id') );
-				$self->stash( success_message => "You have successfully registered for" . $self->event->title . "!" );
+				$self->stash( success_message => "You have successfully registered for " . $self->event->title . "!" );
 				return $self->render( template => 'register', seats => $self->seats );
 			} else {
 				warn "PAYPAL ERROR: Unable to complete payment for: " . $self->session('paypal_id');
