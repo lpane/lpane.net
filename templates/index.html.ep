@@ -16,7 +16,8 @@
 						<p>Join our <a href='https://discord.gg/n6SgyVn'>discord</a> and stay tuned for the next LAN party.</p>
 					% }
 				% } else {
-					<h3 style='font-weight: 300; margin-bottom: 15px;'>Stay tuned for our next LAN party</h3>
+					<h4 style='font-weight: 300; margin-bottom: 15px;'>Join our <a href='https://discord.gg/n6SgyVn'>discord</a> and stay tuned for the next LAN party</h4>
+					<p>Check out our last LAN party <a href='https://www.instagram.com/stories/highlights/17844033760343981/'>on Instagram</a></p>
 				% }
 
 			</div>
@@ -27,6 +28,7 @@
                 <h1><%= $event->title %></h1>
                 <p><%= $event->description %></p>
 				<p>Game Underground is in a fantastic spot on Moody Street a few doors down from Lizzy's Ice Cream. Just outside the door you'll find bars, restrautnts, quick places to eat.</p>
+				<p>If you want to take a break from PC gaming they also have an <a href="https://www.game-underground.com/arcade">arcade!</a></p>
                 <div>
                     <b>Start:</b> <%= $start %><br>
                     <b>End:</b> <%= $end %><br>
@@ -78,7 +80,7 @@
                     <li>Mouse Pad</li>
                     <li>Headphones</li>
                 </ul>
-                <p>It's also not a bad idea to bring your own chair if you want to go through the trouble to be more comfortable.</p>
+                <p>If you have an extra set of cables you can save yourself from crawling under your desk. You're also welcome to bring your own chair if you want to go through the trouble to be more comfortable. That way you can load up your chair and roll everything in!</p>
             </div>
 		% }
 
