@@ -12,8 +12,8 @@ method index {
 	# https://metacpan.org/pod/DateTime#Formatters-And-Stringification
 	$self->stash(
         title => 'Home',
-        start => 'Saturday, January 12th @ 12pm',
-        end => 'Sunday, January 13th @ 12pm',
+        start => 'Saturday, May 4th @ 12pm',
+        end => 'Sunday, May 5th @ 12pm',
         seats => $self->seats
     );
 

@@ -1,7 +1,7 @@
 %= include 'segments/top'
 
 	<section class='col-xs-12' id='unique'>
-		<p><img src='img/walthlan-hidden.jpg' class='img-responsive' alt='Some of us at the LPANE Nor'Easter LAN party in 2009.'></p>
+		<p><img src='img/walthlan-winter-2019.jpg' class='img-responsive' alt='Some of us at the LPANE Nor'Easter LAN party in 2009.'></p>
 		<h1><span class='accent'>About</span> LPANE</h1>
 		<p>The LAN Party Association of New England is a Boston area group of guys and gals who play games together, run servers, and organize LAN parties. Our goal is help host, promote, and provide resources and equipment to other LAN parties in New England.</p>
 
