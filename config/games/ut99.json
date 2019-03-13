@@ -1,0 +1,14 @@
+{
+	"title": "Unreal Tournament GOTY (UT99)",
+	"type": "FPS, Deathmatch, InstaGib, CTF",
+  "price": "Free",
+	"description": "The best LAN party death match game from the CRT days. It still holds up as a LAN party staple today. We can provide a copy for you at the LAN.",
+	"media": {
+		"type": "youtube",
+		"src": "https://www.youtube.com/embed/osJbZEvrSXI"
+	},
+	"link": {
+		"name": "GOG",
+		"href": "https://www.gog.com/game/unreal_tournament_goty"
+	}
+}
