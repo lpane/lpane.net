@@ -52,7 +52,8 @@
 
             <div class='col-sm-12'>
                 <h2>Games</h2>
-				<p>LAN parties run smooth when everyone has the same games. <b>Please come prepared</b> with the following games installed and ready to go.</p>
+				<p>LAN parties run smooth when everyone has the same games. We play a lot of LAN party classics that are either very cheap or free to play.</p>
+				<p><b>Please come prepared</b> with the following games installed and ready to go.</p>
 
 				<ul>
 				% foreach my $game ( @{ $event->games } ) {
@@ -64,7 +65,7 @@
 
             <div class='col-sm-12'>
                 <h2>Sleep</h2>
-                <p>This is an overnight LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning there will be members of the <%= $event->title %> staff awake all night to watch over the equipment.</p>
+                <p>This is an overnight LAN party. Some of us will sleep at the LAN with an air mattress, sleeping bag, and pillow. However if you want to go home for some rest and come back in the morning our dedicated staff will be awake all night to watch over the equipment.</p>
             </div>
 
             <div class='col-sm-12'>

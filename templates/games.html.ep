@@ -6,18 +6,12 @@
 		<h1><%= $event->title %> <span class='accent'>Games</span></h1>
 		<p>LAN parties run smooth when everyone has the same games. <b>Please come prepared</b> with the following games installed and ready to go.</p>
 		% foreach my $game ( @{ $event->games } ) {
-			<div class='col-xs-12 col-md-6 game-description'>
+			<div class='col-xs-12 col-md-12'>
 				<h3><%= $game->title %></h3>
+				<p><i><%= $game->type %></i></p>
 				<p><%= $game->description %></p>
-				<%= link_to $game->link->name => $game->link->href %>
-				<br>
+				<p><%= link_to $game->link->name => $game->link->href %></p>
 			</div>
-			<div class='col-xs-12 col-md-6 game-preview'>
-				% if( $game->media->type eq "youtube" ) {
-					<iframe max-width="560" max-height="315" src="<%= $game->media->src %>" frameborder="0" allowfullscreen class='trailer-video'></iframe>
-				% }
-			</div>
-		<hr>
 		% }
 	% } else {
 		<h1><span class='accent'>Games</span> LPANE Loves</h1>
