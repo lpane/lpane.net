@@ -1,6 +1,7 @@
-
-lpane.net
+LPANE.net (Deprecated perl backend)
 =================
+
+Built with perl on mojolicious
 
 ### INSTALLATION
 
