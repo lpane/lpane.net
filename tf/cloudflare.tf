@@ -29,6 +29,14 @@ provider "cloudflare" {
   email = var.cf_email
 }
 
+resource "cloudflare_zone_settings_override" "cf_zone_settings" {
+  zone_id = var.cf_zone_id
+
+  settings {
+    ssl = "strict"
+  }
+}
+
 resource "cloudflare_record" "b2_proxy" {
   zone_id = var.cf_zone_id
   name    = "@"
